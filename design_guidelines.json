@@ -1,0 +1,134 @@
+{
+  "theme": "light",
+  "art_direction": "Clinical Precision & High-End Engineering. Awwwards-level design. Swiss & High-Contrast mixed with Organic Medical Vibe. The design should look like a cutting-edge medical tech site, not a generic SaaS. It uses a Stark White base with Obsidian text and Medical Cobalt accents. Layouts should use 'Grid Borders' (The 'Technical' Look) exposing the skeleton to emphasize engineering precision.",
+  "typography": {
+    "font_pairing": "Cabinet Grotesk (Headings) + IBM Plex Sans (Body)",
+    "description": "Cabinet Grotesk provides a modern, slightly technical but highly impactful display aesthetic for large text. IBM Plex Sans brings sterile, highly legible, monospace-adjacent precision for product specs and paragraphs.",
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-none (Kinetic Hero)",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-semibold",
+      "body": "text-base leading-relaxed text-gray-800",
+      "labels_overlines": "text-xs font-bold uppercase tracking-[0.2em] text-gray-500"
+    }
+  },
+  "colors": {
+    "background": "#F8F9FA",
+    "surface": "#FFFFFF",
+    "text_primary": "#0A0A0A",
+    "text_secondary": "#52525B",
+    "accent_primary": "#0F4C81",
+    "accent_secondary": "#0047AB",
+    "alert_highlight": "#E63946",
+    "border_color": "#E4E4E7",
+    "notes": "Avoid all purple gradients and dark-on-dark styles. Maintain high contrast for a clinical, trustworthy feel. Color is used functionally: 95% monochrome, 5% Medical Cobalt."
+  },
+  "visual_enhancers": {
+    "borders": "Exposed grid skeleton. 1px solid borders (#E4E4E7) to define sections. Remove border on the last item of a row to create an open edge.",
+    "shadows": "Minimal. Use sharp 1px borders to ground elements rather than soft shadows. If shadows are used, use very subtle ambient shadow.",
+    "glassmorphism": "Used only for the sticky header. bg-white/70, backdrop-blur-xl, with a 1px delicate inner stroke (border-black/5).",
+    "textures": "Subtle noise overlay (grain) in the hero section to kill digital flatness."
+  },
+  "layouts": {
+    "spacing": "Generous. Use p-8, p-12, p-24 for padding to give clinical breathing room.",
+    "grid": "Bento 'Technical' Grid. col-span logic applied asymmetrically for product showcase and manifesto.",
+    "alignment": "Left-align text by default. Only center-align if it improves visual rhythm."
+  },
+  "motion": {
+    "scroll": "Lenis for smooth momentum scrolling.",
+    "hero_reveal": "Masked line-by-line reveal using Framer Motion (initial Y offset, opacity 0 -> 1, overflow hidden on parent).",
+    "micro_interactions": "Hover states on product cards: slight zoom of the image inside a clipped frame, border color shifts to Medical Cobalt.",
+    "parallax": "Subtle parallax on the hero image or 3D element.",
+    "marquee": "Slow editorial marquee for client logos or brand statements using react-fast-marquee."
+  },
+  "media": {
+    "style": "Real product photography treated deliberately. Use spotlight effects or clipped frames with neutral backgrounds.",
+    "image_urls": {
+      "logo": {
+        "url": "https://images.unsplash.com/photo-1762939079730-23708c0dd337?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGVjaG5vbG9neSUyMGxvZ298ZW58MHx8fHwxNzg1MzAxODEwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Medical Technology Logo"
+      },
+      "hero_background": {
+        "url": "https://images.unsplash.com/photo-1775504982885-b0c0f089a0bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsYWJvcmF0b3J5JTIwaW50ZXJpb3J8ZW58MHx8fHwxNzg1MzAxODAzfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Modern Laboratory Interior - use with bg-white/40 overlay or clipped inside a central frame."
+      },
+      "product_lab_equipment_1": {
+        "url": "https://images.unsplash.com/photo-1581091007718-0c50d599bfd0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHw0fHxiaW9tZWRpY2FsJTIwZXF1aXBtZW50JTIwbWljcm9zY29wZXxlbnwwfHx8fDE3ODUzMDE4MDN8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Biomedical Equipment Microscope Close up"
+      },
+      "product_lab_equipment_2": {
+        "url": "https://images.unsplash.com/photo-1526930382372-67bf22c0fce2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxiaW9tZWRpY2FsJTIwZXF1aXBtZW50JTIwbWljcm9zY29wZXxlbnwwfHx8fDE3ODUzMDE4MDN8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Microscope on white surface"
+      },
+      "product_surgical_1": {
+        "url": "https://images.unsplash.com/photo-1688565631957-0306970fdd74?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxzdXJnaWNhbCUyMGluc3RydW1lbnRzJTIwc3RlcmlsZXxlbnwwfHx8fDE3ODUzMDE4MDN8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Tray with surgical instruments"
+      },
+      "product_surgical_2": {
+        "url": "https://images.unsplash.com/photo-1668453598237-27098d2575ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxzdXJnaWNhbCUyMGluc3RydW1lbnRzJTIwc3RlcmlsZXxlbnwwfHx8fDE3ODUzMDE4MDN8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Silver surgical scissors"
+      },
+      "services_image": {
+        "url": "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxzY2llbnRpc3QlMjB3b3JraW5nJTIwaW4lMjBsYWJ8ZW58MHx8fHwxNzg1MzAxODAzfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Scientist using pipette with test tubes"
+      }
+    }
+  },
+  "pages_and_components": {
+    "header": {
+      "type": "Sticky Crystal Glass Navigation",
+      "details": "Logo left, 3-5 links center, contact phone right. Must have backdrop-blur-xl and bg-white/70."
+    },
+    "hero_section": {
+      "type": "Kinetic Typographic Hero",
+      "details": "Massive masked text reveal ('Precision in Every Variable'). A clipped frame (maybe an arched or sharp rectangular window) showing the hero_background image with subtle parallax (Framer Motion). Do not use a generic full-screen overlay."
+    },
+    "editorial_marquee": {
+      "type": "The 'Editorial Ribbon'",
+      "details": "A slow, smooth scrolling strip featuring brand claims or client logos. High contrast text on a light gray background. Huge gap between items (gap-24)."
+    },
+    "product_catalog": {
+      "type": "Technical Bento Grid",
+      "details": "A grid (grid-cols-1 md:grid-cols-3 lg:grid-cols-4) displaying lab equipment and surgical items. Category filtering on the left or top. Each card uses the 'Technical Look' with a 1px border, white background, and a spotlight image. Hover triggers an image scale and border color shift. Includes a search input."
+    },
+    "services_manifesto": {
+      "type": "Numbered Chapters",
+      "details": "Instead of basic service boxes, present them as 'Chapters' (01. Installation, 02. Maintenance, 03. Calibration). Use huge numbers (Cabinet Grotesk) and clinical descriptions. Pair with the 'services_image'."
+    },
+    "testimonials": {
+      "type": "Minimalist Quotes",
+      "details": "Large, beautifully typeset quotes in Cabinet Grotesk, stripped of basic card containers. Use an exposed skeleton layout with borders."
+    },
+    "about_contact": {
+      "type": "Direct Contact Block",
+      "details": "No generic forms. Massive typography for the phone number and email. High-contrast section (perhaps dark background here to shift the tone before the footer, using Obsidian bg with white text)."
+    },
+    "footer": {
+      "type": "Massive Type Footer",
+      "details": "Huge brand name at the bottom (text-[10vw]), essential links above it. Dark theme footer to contrast with the light theme body."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Use framer-motion for the masked line-by-line reveal in the hero section.",
+    "Implement @studio-freight/lenis or lenis for smooth scrolling (make sure to wrap the layout in it).",
+    "Use react-fast-marquee for the editorial marquee strip.",
+    "Use purely custom HTML/Tailwind for the layout structure, implementing the exposed grid skeleton (borders on right and bottom of elements).",
+    "Use Shadcn only for complex interactives like the catalog search or dropdown filters if needed, but style them to match the stark medical precision theme.",
+    "Ensure all interactive elements have data-testid attributes (e.g., data-testid='product-card-1').",
+    "Do NOT use pure #000000. Use the provided Obsidian (#0A0A0A) for text.",
+    "Ensure the hero image is treated beautifully - do not slap a heavy dark overlay on it. Use a clipped frame/window approach.",
+    "Install @phosphor-icons/react for precise, high-end technical icons. Avoid emoji icons."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy and crisp borders.",
+    "You MUST NOT apply universal transition (e.g., transition: all). Add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container (.App { text-align: center; }).",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, custom selection states, and loading animations separate good from extraordinary.",
+    "NEVER use placeholder text for images. Use the provided Image URLs.",
+    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing."
+  ]
+}
