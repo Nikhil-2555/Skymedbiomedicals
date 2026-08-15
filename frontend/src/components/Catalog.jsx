@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { PRODUCTS, CATEGORIES } from "@/data/products";
 import { ProductCard } from "@/components/ProductCard";
@@ -11,9 +11,37 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 
+const SkeletonCard = ({ i }) => (
+    <div
+        className="bg-white border border-[#e4e4e7]"
+        style={{ animationDelay: `${i * 60}ms` }}
+    >
+        <div className="skeleton aspect-[4/3]" />
+        <div className="p-5 border-t border-[#e4e4e7] space-y-3">
+            <div className="skeleton h-3 w-24" />
+            <div className="skeleton h-4 w-3/4" />
+            <div className="skeleton h-3 w-full" />
+            <div className="skeleton h-3 w-2/3" />
+        </div>
+    </div>
+);
+
 export const Catalog = () => {
     const [active, setActive] = useState("All");
     const [query, setQuery] = useState("");
+    const [loading, setLoading] = useState(false);
+    const firstRun = useRef(true);
+
+    // Show shimmer skeletons briefly whenever filter/query changes
+    useEffect(() => {
+        if (firstRun.current) {
+            firstRun.current = false;
+            return;
+        }
+        setLoading(true);
+        const t = setTimeout(() => setLoading(false), 260);
+        return () => clearTimeout(t);
+    }, [active, query]);
 
     const filtered = useMemo(() => {
         const q = query.trim().toLowerCase();
@@ -35,7 +63,13 @@ export const Catalog = () => {
             className="bg-[#f8f9fa] py-20 sm:py-28 scroll-mt-20"
         >
             <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
-                <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+                <motion.div
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12"
+                >
                     <div>
                         <p className="overline mb-4">02 — The Catalog</p>
                         <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-[0.95] text-[#0a0a0a] max-w-2xl">
@@ -49,26 +83,40 @@ export const Catalog = () => {
                         specified, sourced and supported end-to-end. Browse a product for
                         full technical detail.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Controls */}
-                <div className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between mb-8 border-y border-[#e4e4e7] py-5">
-                    {/* Desktop chips */}
-                    <div className="hidden md:flex flex-wrap gap-2">
-                        {CATEGORIES.map((c) => (
-                            <button
-                                key={c}
-                                data-testid={`filter-${c.replace(/\s+/g, "-").toLowerCase()}`}
-                                onClick={() => setActive(c)}
-                                className={`text-xs font-semibold px-4 py-2 rounded-full border transition-colors ${
-                                    active === c
-                                        ? "bg-[#0a0a0a] text-white border-[#0a0a0a]"
-                                        : "bg-white text-[#0a0a0a] border-[#e4e4e7] hover:border-[#0f4c81]"
-                                }`}
-                            >
-                                {c}
-                            </button>
-                        ))}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between mb-8 border-y border-[#e4e4e7] py-5"
+                >
+                    {/* Desktop chips with sliding indicator */}
+                    <div className="hidden md:flex flex-wrap gap-1">
+                        {CATEGORIES.map((c) => {
+                            const isActive = active === c;
+                            return (
+                                <button
+                                    key={c}
+                                    data-testid={`filter-${c.replace(/\s+/g, "-").toLowerCase()}`}
+                                    onClick={() => setActive(c)}
+                                    className={`relative text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-300 ${
+                                        isActive ? "text-white" : "text-[#0a0a0a] hover:text-[#0f4c81]"
+                                    }`}
+                                >
+                                    {isActive && (
+                                        <motion.span
+                                            layoutId="filter-indicator"
+                                            className="absolute inset-0 bg-[#0a0a0a] rounded-full"
+                                            transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                                        />
+                                    )}
+                                    <span className="relative z-10">{c}</span>
+                                </button>
+                            );
+                        })}
                     </div>
 
                     {/* Mobile select */}
@@ -105,7 +153,7 @@ export const Catalog = () => {
                             className="w-full h-11 pl-10 pr-4 rounded-full border border-[#e4e4e7] bg-white text-sm text-[#0a0a0a] placeholder:text-[#52525b] focus:outline-none focus:border-[#0f4c81] transition-colors"
                         />
                     </div>
-                </div>
+                </motion.div>
 
                 <div className="flex items-center justify-between mb-6">
                     <p className="font-mono text-xs text-[#52525b]" data-testid="result-count">
@@ -121,26 +169,54 @@ export const Catalog = () => {
                     )}
                 </div>
 
-                {filtered.length > 0 ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                        {filtered.map((p, i) => (
-                            <ProductCard key={p.id} product={p} index={i} />
-                        ))}
-                    </div>
-                ) : (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        className="border border-dashed border-[#e4e4e7] rounded-sm py-24 text-center"
-                    >
-                        <p className="font-display text-2xl font-bold text-[#0a0a0a]">
-                            No matching products
-                        </p>
-                        <p className="mt-2 text-sm text-[#52525b]">
-                            Try a different search term or category.
-                        </p>
-                    </motion.div>
-                )}
+                <div className="relative min-h-[200px]">
+                    <AnimatePresence mode="wait">
+                        {loading ? (
+                            <motion.div
+                                key="skeletons"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="grid-catalog"
+                                data-testid="catalog-skeletons"
+                            >
+                                {Array.from({ length: 8 }).map((_, i) => (
+                                    <SkeletonCard key={i} i={i} />
+                                ))}
+                            </motion.div>
+                        ) : filtered.length > 0 ? (
+                            <motion.div
+                                key={`grid-${active}-${query}`}
+                                initial={{ opacity: 0, y: 12 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                className="grid-catalog"
+                            >
+                                {filtered.map((p, i) => (
+                                    <ProductCard key={p.id} product={p} index={i} />
+                                ))}
+                            </motion.div>
+                        ) : (
+                            <motion.div
+                                key="empty"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.25 }}
+                                className="border border-dashed border-[#e4e4e7] rounded-sm py-24 text-center"
+                            >
+                                <p className="font-display text-2xl font-bold text-[#0a0a0a]">
+                                    No matching products
+                                </p>
+                                <p className="mt-2 text-sm text-[#52525b]">
+                                    Try a different search term or category.
+                                </p>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
             </div>
         </section>
     );

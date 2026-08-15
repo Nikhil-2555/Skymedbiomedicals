@@ -1,6 +1,7 @@
 import { BRAND, CONTACT, NAV } from "@/data/site";
 import { scrollToId } from "@/lib/useLenis";
 import { useNavigate, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Footer = () => {
     const navigate = useNavigate();
@@ -17,7 +18,13 @@ export const Footer = () => {
             data-testid="site-footer"
             className="bg-[#0a0a0a] text-white pt-16 sm:pt-20 overflow-hidden"
         >
-            <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
+            <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="mx-auto max-w-[1400px] px-5 sm:px-8"
+            >
                 <div className="grid md:grid-cols-[1.4fr_1fr_1fr] gap-10 pb-14 border-b border-white/10">
                     <div>
                         <div className="font-display font-extrabold text-2xl tracking-tight">
@@ -65,7 +72,7 @@ export const Footer = () => {
                     <span>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</span>
                     <span>Precision · Reliability · Compliance</span>
                 </div>
-            </div>
+            </motion.div>
 
             <div
                 aria-hidden

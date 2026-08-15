@@ -5,6 +5,7 @@ import { ArrowLeft, Phone, EnvelopeSimple, ArrowUpRight, CheckCircle } from "@ph
 import { getProductBySlug, getRelated } from "@/data/products";
 import { CONTACT } from "@/data/site";
 import { Seo } from "@/components/Seo";
+import { scrollToId } from "@/lib/useLenis";
 
 export default function ProductDetail() {
     const { slug } = useParams();
@@ -44,7 +45,10 @@ export default function ProductDetail() {
             <div className="mx-auto max-w-[1400px] px-5 sm:px-8 pt-28 sm:pt-32 pb-20">
                 <button
                     data-testid="back-to-catalog"
-                    onClick={() => navigate("/#catalog")}
+                    onClick={() => {
+                        navigate("/");
+                        setTimeout(() => scrollToId("catalog"), 300);
+                    }}
                     className="inline-flex items-center gap-2 text-sm font-medium text-[#52525b] hover:text-[#0a0a0a] transition-colors mb-8"
                 >
                     <ArrowLeft size={16} weight="bold" /> All products

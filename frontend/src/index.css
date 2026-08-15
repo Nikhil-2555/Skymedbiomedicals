@@ -92,6 +92,81 @@ code,
     font-family: "Cabinet Grotesk", sans-serif;
 }
 
+/* Fluid hero headline sizing */
+.hero-headline {
+    font-size: clamp(2.75rem, 10vw, 8.4rem);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+}
+
+/* Responsive product grid using auto-fit for smooth reflow */
+.grid-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.grid-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* Product card hover — only on real hover devices */
+@media (hover: hover) and (pointer: fine) {
+    .card-hover {
+        transition:
+            transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+            box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+            border-color 0.3s ease;
+        will-change: transform;
+    }
+    .card-hover:hover {
+        transform: translateY(-6px);
+        box-shadow:
+            0 12px 32px -12px rgba(10, 10, 10, 0.14),
+            0 4px 10px -4px rgba(10, 10, 10, 0.06);
+    }
+    .card-hover:hover .card-image {
+        transform: scale(1.06);
+    }
+    .card-image {
+        transition: transform 0.5s ease-out;
+        will-change: transform;
+    }
+}
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+    0% {
+        background-position: -400px 0;
+    }
+    100% {
+        background-position: 400px 0;
+    }
+}
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        #eff1f3 0%,
+        #f7f8fa 40%,
+        #eff1f3 80%
+    );
+    background-size: 800px 100%;
+    animation: shimmer 1.4s linear infinite;
+}
+
+/* Respect user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 @layer base {
     :root {
         --background-hsl: 210 17% 98%;

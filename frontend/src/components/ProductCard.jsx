@@ -2,30 +2,35 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "@phosphor-icons/react";
 
+// Staggered scroll-reveal — 80ms between cards, cascading from 0
 export const ProductCard = ({ product, index = 0 }) => {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.6, delay: (index % 4) * 0.06, ease: [0.16, 1, 0.3, 1] }}
+            transition={{
+                duration: 0.55,
+                delay: Math.min(index * 0.08, 0.6),
+                ease: [0.16, 1, 0.3, 1],
+            }}
         >
             <Link
                 to={`/product/${product.slug}`}
                 data-testid={`product-card-${product.id}`}
-                className="group relative flex flex-col h-full bg-white border border-[#e4e4e7] hover:border-[#0f4c81] transition-colors duration-300"
+                className="card-hover group relative flex flex-col h-full bg-white border border-[#e4e4e7] hover:border-[#0f4c81]"
             >
                 <div className="relative overflow-hidden aspect-[4/3] bg-[#f1f3f5]">
                     <img
                         src={product.image}
                         alt={product.name}
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
+                        className="card-image absolute inset-0 w-full h-full object-cover"
                     />
-                    <span className="absolute top-3 left-3 overline bg-white/85 backdrop-blur px-2.5 py-1 rounded-full">
+                    <span className="absolute top-3 left-3 overline bg-white/85 backdrop-blur px-2.5 py-1 rounded-full z-10">
                         {product.code}
                     </span>
-                    <span className="absolute bottom-0 right-0 grid place-items-center w-11 h-11 bg-[#0a0a0a] text-white translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <span className="absolute bottom-0 right-0 grid place-items-center w-11 h-11 bg-[#0a0a0a] text-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
                         <ArrowUpRight size={18} weight="bold" />
                     </span>
                 </div>
@@ -41,7 +46,7 @@ export const ProductCard = ({ product, index = 0 }) => {
                         <span className="font-mono text-xs text-[#52525b]">
                             {product.price}
                         </span>
-                        <span className="text-xs font-semibold text-[#0a0a0a] group-hover:text-[#0f4c81] transition-colors">
+                        <span className="text-xs font-semibold text-[#0a0a0a] transition-colors">
                             View specs
                         </span>
                     </div>

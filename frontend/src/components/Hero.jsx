@@ -3,12 +3,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ArrowUpRight } from "@phosphor-icons/react";
 import { HERO_IMAGE, STATS } from "@/data/site";
 import { scrollToId } from "@/lib/useLenis";
+import { CountUp } from "@/components/CountUp";
 
 const line = {
     hidden: { y: "110%" },
     show: (i) => ({
         y: "0%",
-        transition: { duration: 0.9, delay: 0.15 + i * 0.12, ease: [0.16, 1, 0.3, 1] },
+        transition: { duration: 0.85, delay: 0.15 + i * 0.15, ease: [0.16, 1, 0.3, 1] },
     }),
 };
 
@@ -29,8 +30,10 @@ export const Hero = () => {
         target: ref,
         offset: ["start start", "end start"],
     });
-    const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "24%"]);
+    // Foreground text moves faster than the background image = parallax
+    const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "28%"]);
     const imgScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+    const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-6%"]);
 
     return (
         <section
@@ -39,7 +42,7 @@ export const Hero = () => {
             data-testid="hero-section"
             className="grain relative overflow-hidden bg-[#f8f9fa] pt-32 sm:pt-40 pb-0"
         >
-            <div className="relative z-10 mx-auto max-w-[1400px] px-5 sm:px-8">
+            <motion.div style={{ y: textY }} className="relative z-10 mx-auto max-w-[1400px] px-5 sm:px-8">
                 <motion.p
                     variants={fade}
                     custom={0}
@@ -50,7 +53,7 @@ export const Hero = () => {
                     Biomedical Retail · Laboratory Setup · Est. 2013
                 </motion.p>
 
-                <h1 className="font-display font-black tracking-tighter leading-[0.92] text-[#0a0a0a] text-[13.5vw] sm:text-[11vw] lg:text-[8.6vw]">
+                <h1 className="hero-headline font-display font-black text-[#0a0a0a]">
                     {HEADLINE.map((l, i) => (
                         <span key={i} className="reveal-mask">
                             <motion.span
@@ -92,7 +95,7 @@ export const Hero = () => {
                         custom={2}
                         initial="hidden"
                         animate="show"
-                        className="flex items-center gap-3"
+                        className="flex flex-wrap items-center gap-3"
                     >
                         <button
                             data-testid="hero-cta-catalog"
@@ -115,7 +118,7 @@ export const Hero = () => {
                         </button>
                     </motion.div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Clipped hero image window with parallax */}
             <motion.div
@@ -129,6 +132,7 @@ export const Hero = () => {
                     <motion.img
                         src={HERO_IMAGE}
                         alt="Modern laboratory interior"
+                        loading="eager"
                         style={{ y: imgY, scale: imgScale }}
                         className="absolute inset-0 w-full h-[130%] object-cover"
                     />
@@ -144,22 +148,23 @@ export const Hero = () => {
                     </button>
                 </div>
 
-                {/* Stats bar — exposed grid skeleton */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 border border-[#e4e4e7] bg-white">
+                {/* Stats bar — CSS grid auto-fit for smooth reflow */}
+                <div className="grid-stats border border-[#e4e4e7] bg-white divide-x divide-[#e4e4e7]">
                     {STATS.map((s, i) => (
-                        <div
+                        <motion.div
                             key={s.label}
-                            className={`p-6 sm:p-8 ${
-                                i < STATS.length - 1 ? "border-r border-[#e4e4e7]" : ""
-                            } ${i < 2 ? "border-b lg:border-b-0 border-[#e4e4e7]" : ""} ${
-                                i === 1 ? "border-r-0 lg:border-r" : ""
-                            }`}
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-40px" }}
+                            transition={{ duration: 0.6, delay: i * 0.08, ease: "easeOut" }}
+                            className="p-6 sm:p-8"
+                            data-testid={`stat-${i}`}
                         >
                             <div className="font-display font-black text-4xl sm:text-5xl tracking-tighter text-[#0a0a0a]">
-                                {s.value}
+                                <CountUp value={s.value} />
                             </div>
                             <div className="overline mt-2">{s.label}</div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </motion.div>

@@ -19,7 +19,12 @@ export const AboutContact = () => {
                 <p className="overline text-white/40 mb-6">05 — About & Contact</p>
 
                 <div className="grid lg:grid-cols-[1.2fr_1fr] gap-14 lg:gap-20">
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-60px" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                    >
                         <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-[0.98]">
                             A decade equipping the labs
                             <br />
@@ -36,10 +41,16 @@ export const AboutContact = () => {
                             No forms, no waiting on a portal — for pricing, availability or a
                             technical question, reach us directly. We answer fast.
                         </p>
-                    </div>
+                    </motion.div>
 
                     {/* Direct contact block */}
-                    <div className="border border-white/10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-60px" }}
+                        transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+                        className="border border-white/10"
+                    >
                         <button
                             data-testid="contact-phone"
                             onClick={() => copy(CONTACT.phone, "Phone number")}
@@ -85,7 +96,7 @@ export const AboutContact = () => {
                             </div>
                             <p className="text-white/80">{CONTACT.hours}</p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
 
                 <motion.div

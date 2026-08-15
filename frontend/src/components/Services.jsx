@@ -12,7 +12,13 @@ export const Services = () => {
             <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
                 <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-start">
                     {/* Left: sticky intro + image */}
-                    <div className="lg:sticky lg:top-28">
+                    <motion.div
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-60px" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        className="lg:sticky lg:top-28"
+                    >
                         <p className="overline mb-4">03 — Capabilities</p>
                         <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-[0.95] text-[#0a0a0a]">
                             Not just supply.
@@ -35,7 +41,7 @@ export const Services = () => {
                                 On-site calibration
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Right: numbered chapters */}
                     <div className="border-t border-[#e4e4e7]">
