@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <>
             <Seo
-                title="Vanta Biomedical — Precision Lab Equipment & Surgical Consumables"
+                title="Skymed Biomedicals — Precision Lab Equipment & Surgical Consumables"
                 description="An organised catalog of laboratory equipment and sterile surgical consumables, backed by installation, calibration and maintenance for research institutions and hospitals."
             />
             <Hero />

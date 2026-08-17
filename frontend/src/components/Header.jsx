@@ -57,7 +57,7 @@ export const Header = () => {
                         className="flex items-center gap-3 group"
                     >
                         <span className="grid place-items-center w-8 h-8 bg-[#0a0a0a] text-white font-display font-black text-lg leading-none rounded-[3px] transition-colors group-hover:bg-[#0f4c81]">
-                            V
+                            S
                         </span>
                         <span className="font-display font-extrabold tracking-tight text-[#0a0a0a] text-lg leading-none">
                             {BRAND.short}

@@ -1,8 +1,8 @@
 // Global site content — edit brand, contact, services and testimonials here.
 
 export const BRAND = {
-    name: "Vanta Biomedical",
-    short: "Vanta",
+    name: "Skymed Biomedicals",
+    short: "Skymed",
     tagline: "Precision instruments for the people who advance medicine.",
     logo: "https://images.unsplash.com/photo-1762939079730-23708c0dd337?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGVjaG5vbG9neSUyMGxvZ298ZW58MHx8fHwxNzg1MzAxODEwfDA&ixlib=rb-4.1.0&q=85",
 };
@@ -10,8 +10,8 @@ export const BRAND = {
 export const CONTACT = {
     phone: "+91 98200 41000",
     phoneHref: "tel:+919820041000",
-    email: "hello@vantabiomedical.com",
-    emailHref: "mailto:hello@vantabiomedical.com",
+    email: "hello@skymedbiomedicals.com",
+    emailHref: "mailto:hello@skymedbiomedicals.com",
     address: "Plot 42, Life Sciences Park, Andheri East, Mumbai 400093",
     hours: "Mon – Sat · 09:00 – 19:00 IST",
 };
