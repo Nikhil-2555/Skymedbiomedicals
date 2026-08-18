@@ -85,7 +85,8 @@ export const Catalog = () => {
                     </p>
                 </motion.div>
 
-                {/* Controls */}
+                {/* Controls — hidden when catalog is empty */}
+                {PRODUCTS.length > 0 && (
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +155,9 @@ export const Catalog = () => {
                         />
                     </div>
                 </motion.div>
+                )}
 
+                {PRODUCTS.length > 0 && (
                 <div className="flex items-center justify-between mb-6">
                     <p className="font-mono text-xs text-[#52525b]" data-testid="result-count">
                         {String(filtered.length).padStart(2, "0")} / {PRODUCTS.length} shown
@@ -168,6 +171,7 @@ export const Catalog = () => {
                         </button>
                     )}
                 </div>
+                )}
 
                 <div className="relative min-h-[200px]">
                     <AnimatePresence mode="wait">
@@ -207,12 +211,26 @@ export const Catalog = () => {
                                 transition={{ duration: 0.25 }}
                                 className="border border-dashed border-[#e4e4e7] rounded-sm py-24 text-center"
                             >
-                                <p className="font-display text-2xl font-bold text-[#0a0a0a]">
-                                    No matching products
-                                </p>
-                                <p className="mt-2 text-sm text-[#52525b]">
-                                    Try a different search term or category.
-                                </p>
+                                {PRODUCTS.length === 0 ? (
+                                    <>
+                                        <p className="overline text-[#0f4c81] mb-3">Coming Soon</p>
+                                        <p className="font-display text-3xl sm:text-4xl font-bold text-[#0a0a0a] max-w-xl mx-auto leading-tight">
+                                            Our full catalog is being refreshed with new product photography.
+                                        </p>
+                                        <p className="mt-4 text-[#52525b] max-w-md mx-auto">
+                                            For pricing, availability or a technical enquiry today, reach us directly by phone or email.
+                                        </p>
+                                    </>
+                                ) : (
+                                    <>
+                                        <p className="font-display text-2xl font-bold text-[#0a0a0a]">
+                                            No matching products
+                                        </p>
+                                        <p className="mt-2 text-sm text-[#52525b]">
+                                            Try a different search term or category.
+                                        </p>
+                                    </>
+                                )}
                             </motion.div>
                         )}
                     </AnimatePresence>
