@@ -8,7 +8,13 @@
 //   3. Replace name, category, image url, specs and description.
 //   4. Save — it appears in the catalog and gets its own /product/<slug> page automatically.
 
-export const CATEGORIES = ["All"];
+export const CATEGORIES = [
+    "All",
+    "Molecular Diagnostics",
+    "Mindray Hematology",
+    "Polymed",
+    "Other",
+];
 
 // Catalog is intentionally empty — real products & photos to be uploaded.
 export const PRODUCTS = [];

@@ -85,8 +85,8 @@ export const Catalog = () => {
                     </p>
                 </motion.div>
 
-                {/* Controls — hidden when catalog is empty */}
-                {PRODUCTS.length > 0 && (
+                {/* Controls — categories always visible; search hidden until products exist */}
+                {CATEGORIES.length > 1 && (
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +139,8 @@ export const Catalog = () => {
                         </Select>
                     </div>
 
-                    {/* Search */}
+                    {/* Search — only when catalog has products */}
+                    {PRODUCTS.length > 0 && (
                     <div className="relative md:w-72">
                         <MagnifyingGlass
                             size={17}
@@ -154,6 +155,7 @@ export const Catalog = () => {
                             className="w-full h-11 pl-10 pr-4 rounded-full border border-[#e4e4e7] bg-white text-sm text-[#0a0a0a] placeholder:text-[#52525b] focus:outline-none focus:border-[#0f4c81] transition-colors"
                         />
                     </div>
+                    )}
                 </motion.div>
                 )}
 
