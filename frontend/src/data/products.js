@@ -1,12 +1,13 @@
 // Product catalog data. Add new products by appending objects here.
-// Each product needs: id, slug (url-safe, unique), name, category, tagline,
-// image (url), price (display string or 'On request'), specs [], features [], description.
+// - Products WITH an `image` render as visual cards in the catalog.
+// - Products with `image` left as empty string render as a text-only list row.
+// - Prices are intentionally NOT shown anywhere on the site (enquire by phone/email).
 //
 // HOW TO ADD A PRODUCT:
-//   1. Copy any object below (or use the template at the bottom).
+//   1. Copy any object below.
 //   2. Give it a NEW unique `id` and `slug`.
-//   3. Replace name, category, image url, specs and description.
-//   4. Save — it appears in the catalog and gets its own /product/<slug> page automatically.
+//   3. Fill in name, category, specs and description.
+//   4. Set `image` to a URL to render as a card, or "" to render as a list row.
 
 export const CATEGORIES = [
     "All",
@@ -25,7 +26,6 @@ export const PRODUCTS = [
         tagline:
             "Portable single-bay RT-PCR analyser — compact molecular diagnostics for low-volume testing.",
         image: "https://customer-assets-39nsmqrw.emergentagent.net/job_lab-solutions-hub-1/artifacts/p9velohh_truelab_Uno_Dx.webp",
-        price: "On request",
         code: "SB-MD001",
         specs: [
             { label: "Brand", value: "Molbio" },
@@ -50,7 +50,6 @@ export const PRODUCTS = [
         tagline:
             "Dual-bay RT-PCR analyser with complete random access — run two assays simultaneously.",
         image: "https://customer-assets-39nsmqrw.emergentagent.net/job_lab-solutions-hub-1/artifacts/hf1ke6dt_Truelab_duo.webp",
-        price: "On request",
         code: "SB-MD002",
         specs: [
             { label: "Brand", value: "Molbio" },
@@ -75,7 +74,6 @@ export const PRODUCTS = [
         tagline:
             "Four-bay high-throughput RT-PCR platform for high-volume molecular diagnostics.",
         image: "https://customer-assets-39nsmqrw.emergentagent.net/job_lab-solutions-hub-1/artifacts/xmoczz1m_Quattro.webp",
-        price: "On request",
         code: "SB-MD003",
         specs: [
             { label: "Brand", value: "Molbio" },
@@ -92,27 +90,1275 @@ export const PRODUCTS = [
         description:
             "The Truelab Quattro is a high-throughput four-bay real-time micro-PCR system that scales molecular testing for busy diagnostic labs, hospital reference centres and public-health screening programmes. Complete random access across all four bays keeps the workflow optimised even when multiple assays run in parallel.",
     },
+    {
+        id: 4,
+        slug: "bc-20s-3-part-hematology-analyzer",
+        name: "BC 20s ( 3 part Hematology Analyzer )",
+        category: "Mindray Hematology",
+        tagline: "Instrument — Mindray.",
+        image: "",
+        code: "SB-MH004",
+        specs: [
+            { label: "Brand", value: "Mindray" },
+            { label: "Type", value: "Instrument" },
+            { label: "Category", value: "Mindray Hematology" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "OEM Mindray warranty & pan-India service network",
+            "Installation, calibration and operator training included",
+            "AMC plans with genuine spares & guaranteed uptime",
+        ],
+        description:
+            "Instrument from Mindray — supplied, installed and supported by our biomedical service team. Includes operator training and AMC options with genuine spares and calibration.",
+    },
+    {
+        id: 5,
+        slug: "bc-5130-5-part-hematology-analyzer",
+        name: "BC 5130 ( 5 part Hematology Analyzer )",
+        category: "Mindray Hematology",
+        tagline: "Instrument — Mindray.",
+        image: "",
+        code: "SB-MH005",
+        specs: [
+            { label: "Brand", value: "Mindray" },
+            { label: "Type", value: "Instrument" },
+            { label: "Category", value: "Mindray Hematology" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "OEM Mindray warranty & pan-India service network",
+            "Installation, calibration and operator training included",
+            "AMC plans with genuine spares & guaranteed uptime",
+        ],
+        description:
+            "Instrument from Mindray — supplied, installed and supported by our biomedical service team. Includes operator training and AMC options with genuine spares and calibration.",
+    },
+    {
+        id: 6,
+        slug: "bc-700-7-series-hematology-analyzer",
+        name: "BC 700 ( 7 series Hematology Analyzer )",
+        category: "Mindray Hematology",
+        tagline: "Instrument — Mindray.",
+        image: "",
+        code: "SB-MH006",
+        specs: [
+            { label: "Brand", value: "Mindray" },
+            { label: "Type", value: "Instrument" },
+            { label: "Category", value: "Mindray Hematology" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "OEM Mindray warranty & pan-India service network",
+            "Installation, calibration and operator training included",
+            "AMC plans with genuine spares & guaranteed uptime",
+        ],
+        description:
+            "Instrument from Mindray — supplied, installed and supported by our biomedical service team. Includes operator training and AMC options with genuine spares and calibration.",
+    },
+    {
+        id: 7,
+        slug: "bs-230-fully-auto-biochemistry-analyzer-w-o-laundry",
+        name: "BS 230 ( Fully auto Biochemistry Analyzer ) W/O laundry",
+        category: "Mindray Hematology",
+        tagline: "Instrument — Mindray.",
+        image: "",
+        code: "SB-MH007",
+        specs: [
+            { label: "Brand", value: "Mindray" },
+            { label: "Type", value: "Instrument" },
+            { label: "Category", value: "Mindray Hematology" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "OEM Mindray warranty & pan-India service network",
+            "Installation, calibration and operator training included",
+            "AMC plans with genuine spares & guaranteed uptime",
+        ],
+        description:
+            "Instrument from Mindray — supplied, installed and supported by our biomedical service team. Includes operator training and AMC options with genuine spares and calibration.",
+    },
+    {
+        id: 8,
+        slug: "bs-240-fully-auto-biochemistry-analyzer-w-o-laundry",
+        name: "BS 240 ( Fully auto Biochemistry Analyzer ) W/O laundry",
+        category: "Mindray Hematology",
+        tagline: "Instrument — Mindray.",
+        image: "",
+        code: "SB-MH008",
+        specs: [
+            { label: "Brand", value: "Mindray" },
+            { label: "Type", value: "Instrument" },
+            { label: "Category", value: "Mindray Hematology" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "OEM Mindray warranty & pan-India service network",
+            "Installation, calibration and operator training included",
+            "AMC plans with genuine spares & guaranteed uptime",
+        ],
+        description:
+            "Instrument from Mindray — supplied, installed and supported by our biomedical service team. Includes operator training and AMC options with genuine spares and calibration.",
+    },
+    {
+        id: 9,
+        slug: "bct-edta-k3-2-0ml-haemocheck-d",
+        name: "BCT EDTA K3 2.0ML HAEMOCHECK(D)",
+        category: "Polymed",
+        tagline: "Vacuum Blood collection tubes — Polymed.",
+        image: "",
+        code: "SB-PM009",
+        specs: [
+            { label: "Brand", value: "Polymed" },
+            { label: "Type", value: "Vacuum Blood collection tubes" },
+            { label: "Category", value: "Polymed" },
+            { label: "Pack / Size", value: "0ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Polymed medical-grade quality",
+            "Sterile packed for consistent pre-analytical results",
+            "Ready stock — quick dispatch across India",
+        ],
+        description:
+            "Vacuum Blood collection tubes from Polymed — engineered for consistent draw volumes and reliable pre-analytical results in haematology, coagulation and biochemistry workflows.",
+    },
+    {
+        id: 10,
+        slug: "bct-fluoride-tube-2ml-haemochek",
+        name: "BCT FLUORIDE TUBE 2ML HAEMOCHEK",
+        category: "Polymed",
+        tagline: "Vacuum Blood collection tubes — Polymed.",
+        image: "",
+        code: "SB-PM010",
+        specs: [
+            { label: "Brand", value: "Polymed" },
+            { label: "Type", value: "Vacuum Blood collection tubes" },
+            { label: "Category", value: "Polymed" },
+            { label: "Pack / Size", value: "2ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Polymed medical-grade quality",
+            "Sterile packed for consistent pre-analytical results",
+            "Ready stock — quick dispatch across India",
+        ],
+        description:
+            "Vacuum Blood collection tubes from Polymed — engineered for consistent draw volumes and reliable pre-analytical results in haematology, coagulation and biochemistry workflows.",
+    },
+    {
+        id: 11,
+        slug: "bct-glucose-estimation-2ml-haemocheck-d",
+        name: "BCT GLUCOSE ESTIMATION 2ML HAEMOCHECK-D",
+        category: "Polymed",
+        tagline: "Vacuum Blood collection tubes — Polymed.",
+        image: "",
+        code: "SB-PM011",
+        specs: [
+            { label: "Brand", value: "Polymed" },
+            { label: "Type", value: "Vacuum Blood collection tubes" },
+            { label: "Category", value: "Polymed" },
+            { label: "Pack / Size", value: "2ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Polymed medical-grade quality",
+            "Sterile packed for consistent pre-analytical results",
+            "Ready stock — quick dispatch across India",
+        ],
+        description:
+            "Vacuum Blood collection tubes from Polymed — engineered for consistent draw volumes and reliable pre-analytical results in haematology, coagulation and biochemistry workflows.",
+    },
+    {
+        id: 12,
+        slug: "bct-k2-edta-tube-3-ml",
+        name: "BCT K2 EDTA Tube 3 ML",
+        category: "Polymed",
+        tagline: "Vacuum Blood collection tubes — Polymed.",
+        image: "",
+        code: "SB-PM012",
+        specs: [
+            { label: "Brand", value: "Polymed" },
+            { label: "Type", value: "Vacuum Blood collection tubes" },
+            { label: "Category", value: "Polymed" },
+            { label: "Pack / Size", value: "3 ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Polymed medical-grade quality",
+            "Sterile packed for consistent pre-analytical results",
+            "Ready stock — quick dispatch across India",
+        ],
+        description:
+            "Vacuum Blood collection tubes from Polymed — engineered for consistent draw volumes and reliable pre-analytical results in haematology, coagulation and biochemistry workflows.",
+    },
+    {
+        id: 13,
+        slug: "bct-serum-4-0ml-haemocheck-d",
+        name: "BCT SERUM 4.0ML HAEMOCHECK(D)",
+        category: "Polymed",
+        tagline: "Vacuum Blood collection tubes — Polymed.",
+        image: "",
+        code: "SB-PM013",
+        specs: [
+            { label: "Brand", value: "Polymed" },
+            { label: "Type", value: "Vacuum Blood collection tubes" },
+            { label: "Category", value: "Polymed" },
+            { label: "Pack / Size", value: "0ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Polymed medical-grade quality",
+            "Sterile packed for consistent pre-analytical results",
+            "Ready stock — quick dispatch across India",
+        ],
+        description:
+            "Vacuum Blood collection tubes from Polymed — engineered for consistent draw volumes and reliable pre-analytical results in haematology, coagulation and biochemistry workflows.",
+    },
+    {
+        id: 14,
+        slug: "bct-serum-gel-3-5ml-haemochek-d",
+        name: "BCT SERUM GEL 3.5ML HAEMOCHEK (D)",
+        category: "Polymed",
+        tagline: "Vacuum Blood collection tubes — Polymed.",
+        image: "",
+        code: "SB-PM014",
+        specs: [
+            { label: "Brand", value: "Polymed" },
+            { label: "Type", value: "Vacuum Blood collection tubes" },
+            { label: "Category", value: "Polymed" },
+            { label: "Pack / Size", value: "5ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Polymed medical-grade quality",
+            "Sterile packed for consistent pre-analytical results",
+            "Ready stock — quick dispatch across India",
+        ],
+        description:
+            "Vacuum Blood collection tubes from Polymed — engineered for consistent draw volumes and reliable pre-analytical results in haematology, coagulation and biochemistry workflows.",
+    },
+    {
+        id: 15,
+        slug: "haemocheck-blood-collection-edta-k2-tube-04-0ml",
+        name: "HAEMOCHECK BLOOD COLLECTION EDTA K2 TUBE (04.0ML)",
+        category: "Polymed",
+        tagline: "Vacuum Blood collection tubes — Polymed.",
+        image: "",
+        code: "SB-PM015",
+        specs: [
+            { label: "Brand", value: "Polymed" },
+            { label: "Type", value: "Vacuum Blood collection tubes" },
+            { label: "Category", value: "Polymed" },
+            { label: "Pack / Size", value: "2 TUBE" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Polymed medical-grade quality",
+            "Sterile packed for consistent pre-analytical results",
+            "Ready stock — quick dispatch across India",
+        ],
+        description:
+            "Vacuum Blood collection tubes from Polymed — engineered for consistent draw volumes and reliable pre-analytical results in haematology, coagulation and biochemistry workflows.",
+    },
+    {
+        id: 16,
+        slug: "haemochek-coagulation-2-7ml-dw-sodium-citrate",
+        name: "HAEMOCHEK COAGULATION 2.7ML DW(SODIUM CITRATE)",
+        category: "Polymed",
+        tagline: "Vacuum Blood collection tubes — Polymed.",
+        image: "",
+        code: "SB-PM016",
+        specs: [
+            { label: "Brand", value: "Polymed" },
+            { label: "Type", value: "Vacuum Blood collection tubes" },
+            { label: "Category", value: "Polymed" },
+            { label: "Pack / Size", value: "7ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Polymed medical-grade quality",
+            "Sterile packed for consistent pre-analytical results",
+            "Ready stock — quick dispatch across India",
+        ],
+        description:
+            "Vacuum Blood collection tubes from Polymed — engineered for consistent draw volumes and reliable pre-analytical results in haematology, coagulation and biochemistry workflows.",
+    },
+    {
+        id: 17,
+        slug: "multisample-blood-collection-needles-22g-1",
+        name: "Multisample Blood Collection Needles 22g*1",
+        category: "Polymed",
+        tagline: "Blood collection Needle — Polymed.",
+        image: "",
+        code: "SB-PM017",
+        specs: [
+            { label: "Brand", value: "Polymed" },
+            { label: "Type", value: "Blood collection Needle" },
+            { label: "Category", value: "Polymed" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Polymed medical-grade quality",
+            "Sterile packed for consistent pre-analytical results",
+            "Ready stock — quick dispatch across India",
+        ],
+        description:
+            "Blood collection Needle from Polymed — engineered for consistent draw volumes and reliable pre-analytical results in haematology, coagulation and biochemistry workflows.",
+    },
+    {
+        id: 18,
+        slug: "ab-ctn-500gms",
+        name: "AB Ctn 500gms",
+        category: "Other",
+        tagline: "Cotton — AB cotton.",
+        image: "",
+        code: "SB-OT018",
+        specs: [
+            { label: "Brand", value: "AB cotton" },
+            { label: "Type", value: "Cotton" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "AB Ctn 500gms from AB cotton. Cotton — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 19,
+        slug: "aspen-pregnency-card-100t",
+        name: "ASPEN PREGNENCY CARD 100T",
+        category: "Other",
+        tagline: "Pregnancy cards — Aspen.",
+        image: "",
+        code: "SB-OT019",
+        specs: [
+            { label: "Brand", value: "Aspen" },
+            { label: "Type", value: "Pregnancy cards" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "100T" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "ASPEN PREGNENCY CARD 100T from Aspen. Pregnancy cards — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 20,
+        slug: "coverslip-22x22-mm-regular",
+        name: "Coverslip-22x22 mm(Regular)",
+        category: "Other",
+        tagline: "Coverslip.",
+        image: "",
+        code: "SB-OT020",
+        specs: [
+            { label: "Type", value: "Coverslip" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "Coverslip-22x22 mm(Regular). Coverslip — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 21,
+        slug: "dbo-fbn-needle-22g",
+        name: "DBO FBN Needle 22G",
+        category: "Other",
+        tagline: "Blood collection Needle — DBO.",
+        image: "",
+        code: "SB-OT021",
+        specs: [
+            { label: "Brand", value: "DBO" },
+            { label: "Type", value: "Blood collection Needle" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "DBO FBN Needle 22G from DBO. Blood collection Needle — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 22,
+        slug: "disposable-blood-collection-tubes",
+        name: "DISPOSABLE BLOOD COLLECTION TUBES",
+        category: "Other",
+        tagline: "Ria Vial PP — Liv care.",
+        image: "",
+        code: "SB-OT022",
+        specs: [
+            { label: "Brand", value: "Liv care" },
+            { label: "Type", value: "Ria Vial PP" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "DISPOSABLE BLOOD COLLECTION TUBES from Liv care. Ria Vial PP — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 23,
+        slug: "disposable-cap-blue",
+        name: "Disposable Cap ( Blue )",
+        category: "Other",
+        tagline: "Disposable Cap.",
+        image: "",
+        code: "SB-OT023",
+        specs: [
+            { label: "Type", value: "Disposable Cap" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "Disposable Cap ( Blue ). Disposable Cap — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 24,
+        slug: "disposable-esr-pipette",
+        name: "DISPOSABLE ESR PIPETTE",
+        category: "Other",
+        tagline: "ESR Pipette — Liv care.",
+        image: "",
+        code: "SB-OT024",
+        specs: [
+            { label: "Brand", value: "Liv care" },
+            { label: "Type", value: "ESR Pipette" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "DISPOSABLE ESR PIPETTE from Liv care. ESR Pipette — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 25,
+        slug: "gloves-large",
+        name: "GLOVES LARGE",
+        category: "Other",
+        tagline: "Gloves Latex — Unique.",
+        image: "",
+        code: "SB-OT025",
+        specs: [
+            { label: "Brand", value: "Unique" },
+            { label: "Type", value: "Gloves Latex" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "GLOVES LARGE from Unique. Gloves Latex — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 26,
+        slug: "gloves-medium",
+        name: "GLOVES MEDIUM",
+        category: "Other",
+        tagline: "Gloves Latex — Unique.",
+        image: "",
+        code: "SB-OT026",
+        specs: [
+            { label: "Brand", value: "Unique" },
+            { label: "Type", value: "Gloves Latex" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "GLOVES MEDIUM from Unique. Gloves Latex — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 27,
+        slug: "hbsag-rapid-test-a-dx",
+        name: "HBsAg Rapid Test A-Dx",
+        category: "Other",
+        tagline: "HbSag Rapid card — CTK.",
+        image: "",
+        code: "SB-OT027",
+        specs: [
+            { label: "Brand", value: "CTK" },
+            { label: "Type", value: "HbSag Rapid card" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "HBsAg Rapid Test A-Dx from CTK. HbSag Rapid card — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 28,
+        slug: "hcv-rapid-test-a-dx",
+        name: "HCV Rapid Test A-Dx",
+        category: "Other",
+        tagline: "HCV Rapid Card — CTK.",
+        image: "",
+        code: "SB-OT028",
+        specs: [
+            { label: "Brand", value: "CTK" },
+            { label: "Type", value: "HCV Rapid Card" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "HCV Rapid Test A-Dx from CTK. HCV Rapid Card — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 29,
+        slug: "hiv-rapid-test-a-dx",
+        name: "HIV Rapid Test A-Dx",
+        category: "Other",
+        tagline: "HIV Rapid Card — CTK.",
+        image: "",
+        code: "SB-OT029",
+        specs: [
+            { label: "Brand", value: "CTK" },
+            { label: "Type", value: "HIV Rapid Card" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "HIV Rapid Test A-Dx from CTK. HIV Rapid Card — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 30,
+        slug: "isopopyl-rubing-alcohol",
+        name: "ISOPOPYL RUBING ALCOHOL",
+        category: "Other",
+        tagline: "IPA Spirit 400ML — Klinik.",
+        image: "",
+        code: "SB-OT030",
+        specs: [
+            { label: "Brand", value: "Klinik" },
+            { label: "Type", value: "IPA Spirit 400ML" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "ISOPOPYL RUBING ALCOHOL from Klinik. IPA Spirit 400ML — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 31,
+        slug: "j-mitra-dengue-ns1-ag-25-test",
+        name: "J.MITRA DENGUE NS1 AG 25 TEST",
+        category: "Other",
+        tagline: "Rapid card — J Mitra.",
+        image: "",
+        code: "SB-OT031",
+        specs: [
+            { label: "Brand", value: "J Mitra" },
+            { label: "Type", value: "Rapid card" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "25 TEST" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "J.MITRA DENGUE NS1 AG 25 TEST from J Mitra. Rapid card — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 32,
+        slug: "jmitra-ns1-dengue-ag-ab-combi-card-1-card",
+        name: "JMITRA  NS1 DENGUE AG& AB COMBI CARD (1 CARD)",
+        category: "Other",
+        tagline: "Rapid card — J Mitra.",
+        image: "",
+        code: "SB-OT032",
+        specs: [
+            { label: "Brand", value: "J Mitra" },
+            { label: "Type", value: "Rapid card" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "JMITRA  NS1 DENGUE AG& AB COMBI CARD (1 CARD) from J Mitra. Rapid card — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 33,
+        slug: "mct-1-5ml-500nos-pkt",
+        name: "MCT-1.5ML 500NOS/PKT",
+        category: "Other",
+        tagline: "1.5 ML MCT.",
+        image: "",
+        code: "SB-OT033",
+        specs: [
+            { label: "Type", value: "1.5 ML MCT" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "5ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "MCT-1.5ML 500NOS/PKT. 1.5 ML MCT — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 34,
+        slug: "methanol-rankem-2-5ltr-m0151",
+        name: "Methanol-Rankem-2.5ltr M0151",
+        category: "Other",
+        tagline: "Methanol — Rankem.",
+        image: "",
+        code: "SB-OT034",
+        specs: [
+            { label: "Brand", value: "Rankem" },
+            { label: "Type", value: "Methanol" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "5ltr" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "Methanol-Rankem-2.5ltr M0151 from Rankem. Methanol — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 35,
+        slug: "mission-urine-strip-10p",
+        name: "MISSION URINE STRIP 10P",
+        category: "Other",
+        tagline: "Urin strip 10P — Mission.",
+        image: "",
+        code: "SB-OT035",
+        specs: [
+            { label: "Brand", value: "Mission" },
+            { label: "Type", value: "Urin strip 10P" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "MISSION URINE STRIP 10P from Mission. Urin strip 10P — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 36,
+        slug: "mission-uristix-100-stris-2-para",
+        name: "MISSION URISTIX 100 STRIS 2 PARA",
+        category: "Other",
+        tagline: "Urin strip 10P — Mission.",
+        image: "",
+        code: "SB-OT036",
+        specs: [
+            { label: "Brand", value: "Mission" },
+            { label: "Type", value: "Urin strip 10P" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "100 STRIS" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "MISSION URISTIX 100 STRIS 2 PARA from Mission. Urin strip 10P — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 37,
+        slug: "needle-holder-1-no",
+        name: "NEEDLE HOLDER 1 NO",
+        category: "Other",
+        tagline: "Needle Holder.",
+        image: "",
+        code: "SB-OT037",
+        specs: [
+            { label: "Type", value: "Needle Holder" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "NEEDLE HOLDER 1 NO. Needle Holder — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 38,
+        slug: "nitrile-examination-gloves-large-18",
+        name: "Nitrile Examination Gloves Large 18%",
+        category: "Other",
+        tagline: "Nitrile Gloves.",
+        image: "",
+        code: "SB-OT038",
+        specs: [
+            { label: "Type", value: "Nitrile Gloves" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "Nitrile Examination Gloves Large 18%. Nitrile Gloves — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 39,
+        slug: "nitrile-examination-gloves-medium-18",
+        name: "Nitrile Examination Gloves Medium 18%",
+        category: "Other",
+        tagline: "Nitrile Gloves.",
+        image: "",
+        code: "SB-OT039",
+        specs: [
+            { label: "Type", value: "Nitrile Gloves" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "Nitrile Examination Gloves Medium 18%. Nitrile Gloves — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 40,
+        slug: "nitrile-gloves-s-18",
+        name: "Nitrile Gloves S 18%",
+        category: "Other",
+        tagline: "Nitrile Gloves.",
+        image: "",
+        code: "SB-OT040",
+        specs: [
+            { label: "Type", value: "Nitrile Gloves" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "Nitrile Gloves S 18%. Nitrile Gloves — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 41,
+        slug: "pasture-pipettes",
+        name: "PASTURE PIPETTES",
+        category: "Other",
+        tagline: "3 ml Dropper.",
+        image: "",
+        code: "SB-OT041",
+        specs: [
+            { label: "Type", value: "3 ml Dropper" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "PASTURE PIPETTES. 3 ml Dropper — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 42,
+        slug: "safeway-syringe-10-ml-w-o",
+        name: "SAFEWAY SYRINGE 10 ML W/O",
+        category: "Other",
+        tagline: "Syringe — Safeway.",
+        image: "",
+        code: "SB-OT042",
+        specs: [
+            { label: "Brand", value: "Safeway" },
+            { label: "Type", value: "Syringe" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "10 ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "SAFEWAY SYRINGE 10 ML W/O from Safeway. Syringe — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 43,
+        slug: "safeway-syringe-2-ml-w-o",
+        name: "SAFEWAY SYRINGE 2 ML W/O",
+        category: "Other",
+        tagline: "Syringe — Safeway.",
+        image: "",
+        code: "SB-OT043",
+        specs: [
+            { label: "Brand", value: "Safeway" },
+            { label: "Type", value: "Syringe" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "2 ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "SAFEWAY SYRINGE 2 ML W/O from Safeway. Syringe — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 44,
+        slug: "safeway-syringe-5-ml-w-o",
+        name: "SAFEWAY SYRINGE 5 ML W/O",
+        category: "Other",
+        tagline: "Syringe — Safeway.",
+        image: "",
+        code: "SB-OT044",
+        specs: [
+            { label: "Brand", value: "Safeway" },
+            { label: "Type", value: "Syringe" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "5 ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "SAFEWAY SYRINGE 5 ML W/O from Safeway. Syringe — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 45,
+        slug: "sample-container-30ml-non-sterile",
+        name: "Sample Container 30ml Non Sterile",
+        category: "Other",
+        tagline: "Urine container.",
+        image: "",
+        code: "SB-OT045",
+        specs: [
+            { label: "Type", value: "Urine container" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "30ml" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "Sample Container 30ml Non Sterile. Urine container — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 46,
+        slug: "sco-slides-1-35mm-50nos-pkt",
+        name: "SCO Slides 1.35mm 50nos./Pkt.",
+        category: "Other",
+        tagline: "Glass Slides — SCO.",
+        image: "",
+        code: "SB-OT046",
+        specs: [
+            { label: "Brand", value: "SCO" },
+            { label: "Type", value: "Glass Slides" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "50nos" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "SCO Slides 1.35mm 50nos./Pkt. from SCO. Glass Slides — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 47,
+        slug: "sd-urocolor-10-para",
+        name: "SD-UROCOLOR ( 10 PARA )",
+        category: "Other",
+        tagline: "Urine strip 10P — Abott.",
+        image: "",
+        code: "SB-OT047",
+        specs: [
+            { label: "Brand", value: "Abott" },
+            { label: "Type", value: "Urine strip 10P" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "10 PARA" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "SD-UROCOLOR ( 10 PARA ) from Abott. Urine strip 10P — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 48,
+        slug: "sodium-hypocloride-5-ltr",
+        name: "SODIUM HYPOCLORIDE 5 LTR",
+        category: "Other",
+        tagline: "Sodium Hypo 4-6%.",
+        image: "",
+        code: "SB-OT048",
+        specs: [
+            { label: "Type", value: "Sodium Hypo 4-6%" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "5 LTR" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "SODIUM HYPOCLORIDE 5 LTR. Sodium Hypo 4-6% — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 49,
+        slug: "soft-tissue-roll",
+        name: "Soft Tissue Roll",
+        category: "Other",
+        tagline: "Tissue roll.",
+        image: "",
+        code: "SB-OT049",
+        specs: [
+            { label: "Type", value: "Tissue roll" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "Soft Tissue Roll. Tissue roll — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 50,
+        slug: "syphilis-strip-ab-rapidtrustline-100t",
+        name: "SYPHILIS STRIP AB RAPIDTRUSTLINE 100T",
+        category: "Other",
+        tagline: "Rapid card — CTK.",
+        image: "",
+        code: "SB-OT050",
+        specs: [
+            { label: "Brand", value: "CTK" },
+            { label: "Type", value: "Rapid card" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "100T" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "SYPHILIS STRIP AB RAPIDTRUSTLINE 100T from CTK. Rapid card — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 51,
+        slug: "tips-white-1000ul-500nos-pkt",
+        name: "Tips-White-1000ul 500nos/Pkt.",
+        category: "Other",
+        tagline: "Tips.",
+        image: "",
+        code: "SB-OT051",
+        specs: [
+            { label: "Type", value: "Tips" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "500nos/Pkt" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "Tips-White-1000ul 500nos/Pkt.. Tips — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 52,
+        slug: "tips-white-200ul-1000nos-pkt",
+        name: "Tips-White-200ul 1000nos/Pkt.",
+        category: "Other",
+        tagline: "Tips.",
+        image: "",
+        code: "SB-OT052",
+        specs: [
+            { label: "Type", value: "Tips" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "1000nos/Pkt" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "Tips-White-200ul 1000nos/Pkt.. Tips — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 53,
+        slug: "tourniquet-belt",
+        name: "TOURNIQUET BELT",
+        category: "Other",
+        tagline: "Tourniquet Belt.",
+        image: "",
+        code: "SB-OT053",
+        specs: [
+            { label: "Type", value: "Tourniquet Belt" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "TOURNIQUET BELT. Tourniquet Belt — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 54,
+        slug: "troponin-i-rapid-a-dx-10-t",
+        name: "TROPONIN I RAPID A-DX 10 T",
+        category: "Other",
+        tagline: "Rapid card — CTK.",
+        image: "",
+        code: "SB-OT054",
+        specs: [
+            { label: "Brand", value: "CTK" },
+            { label: "Type", value: "Rapid card" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "10 T" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "TROPONIN I RAPID A-DX 10 T from CTK. Rapid card — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 55,
+        slug: "tydal-widal-slide-o-h-2-2-5-ml",
+        name: "TYDAL WIDAL SLIDE(O,H)(2+2*5) ML",
+        category: "Other",
+        tagline: "Widal — Tulip.",
+        image: "",
+        code: "SB-OT055",
+        specs: [
+            { label: "Brand", value: "Tulip" },
+            { label: "Type", value: "Widal" },
+            { label: "Category", value: "Other" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "TYDAL WIDAL SLIDE(O,H)(2+2*5) ML from Tulip. Widal — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 56,
+        slug: "typhoid-igg-igm-rapid-test-30t",
+        name: "TYPHOID IGG/IGM RAPID TEST 30T",
+        category: "Other",
+        tagline: "Rapid card — CTK.",
+        image: "",
+        code: "SB-OT056",
+        specs: [
+            { label: "Brand", value: "CTK" },
+            { label: "Type", value: "Rapid card" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "30T" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "TYPHOID IGG/IGM RAPID TEST 30T from CTK. Rapid card — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 57,
+        slug: "ultra-hbsag-card-sd-30t",
+        name: "ULTRA HBsAg CARD SD 30T",
+        category: "Other",
+        tagline: "Rapid card — Ultra.",
+        image: "",
+        code: "SB-OT057",
+        specs: [
+            { label: "Brand", value: "Ultra" },
+            { label: "Type", value: "Rapid card" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "30T" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "ULTRA HBsAg CARD SD 30T from Ultra. Rapid card — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 58,
+        slug: "ultra-hcv-test-card-30t-sd",
+        name: "ULTRA HCV TEST CARD 30T SD",
+        category: "Other",
+        tagline: "Rapid card — Ultra.",
+        image: "",
+        code: "SB-OT058",
+        specs: [
+            { label: "Brand", value: "Ultra" },
+            { label: "Type", value: "Rapid card" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "30T" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "ULTRA HCV TEST CARD 30T SD from Ultra. Rapid card — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 59,
+        slug: "ultra-hiv-1-2-card-30t-sd",
+        name: "ULTRA HIV 1/2 CARD 30T SD",
+        category: "Other",
+        tagline: "Rapid card — Ultra.",
+        image: "",
+        code: "SB-OT059",
+        specs: [
+            { label: "Brand", value: "Ultra" },
+            { label: "Type", value: "Rapid card" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "30T" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "ULTRA HIV 1/2 CARD 30T SD from Ultra. Rapid card — maintained in ready stock for same-week dispatch across India.",
+    },
+    {
+        id: 60,
+        slug: "urine-container-non-sterile-50ml-1-no",
+        name: "URINE CONTAINER NON STERILE 50ML 1 NO",
+        category: "Other",
+        tagline: "Urine container.",
+        image: "",
+        code: "SB-OT060",
+        specs: [
+            { label: "Type", value: "Urine container" },
+            { label: "Category", value: "Other" },
+            { label: "Pack / Size", value: "50ML" },
+            { label: "Availability", value: "Ready stock — enquire for pricing" },
+        ],
+        features: [
+            "Quality-checked stock, ready for dispatch",
+            "Consistent performance across batches",
+            "Compatible with standard lab workflows",
+        ],
+        description:
+            "URINE CONTAINER NON STERILE 50ML 1 NO. Urine container — maintained in ready stock for same-week dispatch across India.",
+    },
 ];
-
-/*
-Template for adding a product:
-{
-    id: 4,
-    slug: "product-slug",
-    name: "Product Name",
-    category: "Category Name",   // one of CATEGORIES above
-    tagline: "One line tagline.",
-    image: "https://your-image-url.jpg",
-    price: "₹1,000",             // or "On request"
-    code: "SB-XX001",
-    specs: [
-        { label: "Brand", value: "Skymed" },
-        { label: "Type", value: "..." },
-    ],
-    features: ["Feature 1", "Feature 2", "Feature 3"],
-    description: "Full paragraph description.",
-}
-*/
 
 export function getProductBySlug(slug) {
     return PRODUCTS.find((p) => p.slug === slug);

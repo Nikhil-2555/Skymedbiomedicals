@@ -54,8 +54,9 @@ export default function ProductDetail() {
                     <ArrowLeft size={16} weight="bold" /> All products
                 </button>
 
-                <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-start">
-                    {/* Image */}
+                <div className={product.image ? "grid lg:grid-cols-2 gap-8 lg:gap-14 items-start" : ""}>
+                    {/* Image — only when a real product photo is provided */}
+                    {product.image && (
                     <motion.div
                         initial={{ opacity: 0, scale: 0.98 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -71,14 +72,23 @@ export default function ProductDetail() {
                             {product.code}
                         </span>
                     </motion.div>
+                    )}
 
                     {/* Details */}
                     <motion.div
                         initial={{ opacity: 0, y: 24 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                        className={product.image ? "" : "max-w-3xl"}
                     >
-                        <p className="overline text-[#0f4c81] mb-4">{product.category}</p>
+                        <div className="flex items-center gap-3 mb-4">
+                            <p className="overline text-[#0f4c81]">{product.category}</p>
+                            {!product.image && (
+                                <span className="font-mono text-[11px] tracking-wider text-[#52525b] border border-[#e4e4e7] px-2 py-0.5 rounded-full">
+                                    {product.code}
+                                </span>
+                            )}
+                        </div>
                         <h1 className="font-display font-black text-4xl sm:text-5xl tracking-tighter leading-[0.98] text-[#0a0a0a]">
                             {product.name}
                         </h1>
@@ -121,17 +131,13 @@ export default function ProductDetail() {
                             </ul>
                         </div>
 
-                        {/* Contact block */}
+                        {/* Contact block — no price displayed anywhere */}
                         <div className="mt-10 border border-[#e4e4e7] bg-white p-6">
                             <p className="font-display font-bold text-xl tracking-tight text-[#0a0a0a]">
-                                {product.price === "On request"
-                                    ? "Pricing on request"
-                                    : `Price — ${product.price}`}
+                                Enquire for pricing & availability
                             </p>
                             <p className="mt-2 text-sm text-[#52525b]">
-                                {product.price === "On request"
-                                    ? `For a quotation, availability or technical guidance on the`
-                                    : `GST extra as applicable. For availability or bulk pricing on the`}{" "}
+                                For a quotation, availability or technical guidance on the{" "}
                                 <span className="font-mono">{product.code}</span>, reach us directly.
                             </p>
                             <div className="mt-5 flex flex-wrap gap-3">
@@ -170,15 +176,23 @@ export default function ProductDetail() {
                                     data-testid={`related-${r.id}`}
                                     className="group bg-white border border-[#e4e4e7] hover:border-[#0f4c81] transition-colors"
                                 >
-                                    <div className="overflow-hidden aspect-[4/3]">
-                                        <img
-                                            src={r.image}
-                                            alt={r.name}
-                                            loading="lazy"
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                        />
-                                    </div>
-                                    <div className="p-4 border-t border-[#e4e4e7] flex items-center justify-between gap-2">
+                                    {r.image ? (
+                                        <div className="overflow-hidden aspect-[4/3]">
+                                            <img
+                                                src={r.image}
+                                                alt={r.name}
+                                                loading="lazy"
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <div className="p-5 pb-3">
+                                            <span className="font-mono text-[11px] tracking-wider text-[#52525b]">
+                                                {r.code}
+                                            </span>
+                                        </div>
+                                    )}
+                                    <div className={`${r.image ? "border-t" : ""} border-[#e4e4e7] p-4 flex items-center justify-between gap-2`}>
                                         <span className="font-display font-semibold text-[#0a0a0a] leading-snug">
                                             {r.name}
                                         </span>

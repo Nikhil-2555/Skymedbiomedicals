@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { PRODUCTS, CATEGORIES } from "@/data/products";
 import { ProductCard } from "@/components/ProductCard";
+import { ProductRow } from "@/components/ProductRow";
 import {
     Select,
     SelectContent,
@@ -198,11 +199,35 @@ export const Catalog = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
-                                className="grid-catalog"
+                                className="space-y-10"
                             >
-                                {filtered.map((p, i) => (
-                                    <ProductCard key={p.id} product={p} index={i} />
-                                ))}
+                                {/* Card grid for products with photos */}
+                                {filtered.some((p) => p.image) && (
+                                    <div className="grid-catalog">
+                                        {filtered
+                                            .filter((p) => p.image)
+                                            .map((p, i) => (
+                                                <ProductCard key={p.id} product={p} index={i} />
+                                            ))}
+                                    </div>
+                                )}
+
+                                {/* Text-only list for products without photos */}
+                                {filtered.some((p) => !p.image) && (
+                                    <div className="bg-[#f1f3f5]/40 border border-[#e4e4e7] rounded-sm overflow-hidden">
+                                        <div className="hidden sm:grid grid-cols-[100px_1fr_180px_auto] gap-6 px-6 py-3 border-b border-[#e4e4e7] bg-white">
+                                            <span className="overline">Code</span>
+                                            <span className="overline">Product</span>
+                                            <span className="overline text-right">Brand</span>
+                                            <span className="w-9" />
+                                        </div>
+                                        {filtered
+                                            .filter((p) => !p.image)
+                                            .map((p, i) => (
+                                                <ProductRow key={p.id} product={p} index={i} />
+                                            ))}
+                                    </div>
+                                )}
                             </motion.div>
                         ) : (
                             <motion.div

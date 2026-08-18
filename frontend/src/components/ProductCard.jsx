@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "@phosphor-icons/react";
 
-// Staggered scroll-reveal — 80ms between cards, cascading from 0
+// Card view — used only for products that have a real product photo.
+// Prices are intentionally NOT displayed; enquiries go via phone/email.
 export const ProductCard = ({ product, index = 0 }) => {
     return (
         <motion.div
@@ -42,12 +43,9 @@ export const ProductCard = ({ product, index = 0 }) => {
                     <p className="mt-2 text-sm text-[#52525b] leading-relaxed flex-1">
                         {product.tagline}
                     </p>
-                    <div className="mt-4 pt-4 border-t border-dashed border-[#e4e4e7] flex items-center justify-between">
-                        <span className="font-mono text-xs text-[#52525b]">
-                            {product.price}
-                        </span>
+                    <div className="mt-4 pt-4 border-t border-dashed border-[#e4e4e7] flex items-center justify-end">
                         <span className="text-xs font-semibold text-[#0a0a0a] transition-colors">
-                            View specs
+                            View specifications →
                         </span>
                     </div>
                 </div>
