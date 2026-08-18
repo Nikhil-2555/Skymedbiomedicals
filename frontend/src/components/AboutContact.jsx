@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Phone, EnvelopeSimple, MapPin, Clock, Copy } from "@phosphor-icons/react";
+import { Phone, EnvelopeSimple, MapPin, Clock, Copy, Sparkle } from "@phosphor-icons/react";
 import { toast } from "sonner";
-import { CONTACT, BRAND } from "@/data/site";
+import { CONTACT, BRAND, VALUES, COMMITMENTS } from "@/data/site";
 
 export const AboutContact = () => {
     const copy = (value, label) => {
@@ -25,19 +25,46 @@ export const AboutContact = () => {
                         viewport={{ once: true, margin: "-60px" }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
                     >
+                        <p className="overline text-[#4a90d9] mb-4">Established 2021</p>
                         <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-[0.98]">
-                            A decade equipping the labs
+                            Your trusted partner for advanced
                             <br />
-                            <span className="text-[#4a90d9]">that move medicine forward.</span>
+                            <span className="text-[#4a90d9]">diagnostic & laboratory solutions.</span>
                         </h2>
                         <p className="mt-8 max-w-xl text-white/70 leading-relaxed text-lg">
-                            {BRAND.name} began on a simple principle: research and clinical
-                            teams deserve a partner who understands the instruments as well
-                            as the paperwork. We supply a broad catalog of laboratory
-                            equipment and sterile surgical consumables, then stand behind
-                            every unit with installation, calibration and maintenance.
+                            {BRAND.name} was founded in 2021 on a simple principle: research
+                            and clinical teams deserve a partner who understands the
+                            instruments as well as the paperwork. We supply an organised
+                            catalog of diagnostic systems, laboratory equipment and sterile
+                            consumables — and back every unit with installation, calibration
+                            and preventive maintenance.
                         </p>
-                        <p className="mt-5 max-w-xl text-white/70 leading-relaxed">
+
+                        {/* Commitments — from company profile */}
+                        <ul className="mt-8 grid sm:grid-cols-3 gap-3 max-w-xl">
+                            {COMMITMENTS.map((c) => (
+                                <li
+                                    key={c}
+                                    className="flex items-start gap-2 border border-white/10 p-4 bg-white/[0.03]"
+                                >
+                                    <Sparkle size={16} weight="fill" className="text-[#4a90d9] mt-0.5 shrink-0" />
+                                    <span className="text-sm text-white/85 leading-snug">{c}</span>
+                                </li>
+                            ))}
+                        </ul>
+
+                        {/* Values strip */}
+                        <div className="mt-6 flex flex-wrap items-center gap-4">
+                            <span className="overline text-white/40">Values</span>
+                            {VALUES.map((v, i) => (
+                                <span key={v} className="flex items-center gap-3">
+                                    <span className="font-display font-bold text-white text-base">{v}</span>
+                                    {i < VALUES.length - 1 && <span className="text-white/30">·</span>}
+                                </span>
+                            ))}
+                        </div>
+
+                        <p className="mt-8 max-w-xl text-white/70 leading-relaxed">
                             No forms, no waiting on a portal — for pricing, availability or a
                             technical question, reach us directly. We answer fast.
                         </p>

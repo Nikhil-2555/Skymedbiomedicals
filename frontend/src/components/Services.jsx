@@ -21,14 +21,15 @@ export const Services = () => {
                     >
                         <p className="overline mb-4">03 — Capabilities</p>
                         <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-[0.95] text-[#0a0a0a]">
-                            Not just supply.
+                            Six solution areas.
                             <br />
-                            <span className="text-[#0f4c81]">Full lifecycle.</span>
+                            <span className="text-[#0f4c81]">One trusted partner.</span>
                         </h2>
                         <p className="mt-6 max-w-md text-[#52525b] leading-relaxed">
-                            From the day the crates arrive to years of dependable readings —
-                            we set up, validate and maintain the instruments your work
-                            depends on.
+                            From molecular diagnostics to point-of-care and everyday
+                            consumables — Skymed covers the full arc of what a modern
+                            clinical or research laboratory needs, plus the service to keep
+                            it running.
                         </p>
                         <div className="relative mt-10 overflow-hidden border border-[#e4e4e7] aspect-[4/3]">
                             <img

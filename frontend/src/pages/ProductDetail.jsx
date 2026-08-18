@@ -20,7 +20,7 @@ export default function ProductDetail() {
         return (
             <div className="min-h-screen grid place-items-center px-5">
                 <div className="text-center">
-                    <Seo title="Product not found — Skymed Biomedicals" />
+                    <Seo title="Product not found — Skymed Biomedical" />
                     <p className="font-display font-black text-6xl tracking-tighter text-[#0a0a0a]">404</p>
                     <p className="mt-3 text-[#52525b]">We couldn&apos;t find that product.</p>
                     <Link
@@ -39,7 +39,7 @@ export default function ProductDetail() {
     return (
         <div className="bg-[#f8f9fa]">
             <Seo
-                title={`${product.name} (${product.code}) — Skymed Biomedicals`}
+                title={`${product.name} (${product.code}) — Skymed Biomedical`}
                 description={`${product.tagline} ${product.description}`}
             />
             <div className="mx-auto max-w-[1400px] px-5 sm:px-8 pt-28 sm:pt-32 pb-20">

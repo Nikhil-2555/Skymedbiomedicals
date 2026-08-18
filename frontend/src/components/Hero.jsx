@@ -50,7 +50,7 @@ export const Hero = () => {
                     animate="show"
                     className="overline mb-6"
                 >
-                    Biomedical Retail · Laboratory Setup · Est. 2013
+                    Established 2021 · Delivering Precision · Empowering Healthcare
                 </motion.p>
 
                 <h1 className="hero-headline font-display font-black text-[#0a0a0a]">
@@ -84,10 +84,10 @@ export const Hero = () => {
                         animate="show"
                         className="max-w-xl text-[#52525b] text-base sm:text-lg leading-relaxed"
                     >
-                        A curated catalog of laboratory equipment and sterile surgical
-                        consumables — supplied, installed and maintained for research
-                        institutions and hospital procurement teams that can&apos;t afford
-                        downtime.
+                        A trusted partner supplying molecular diagnostics, RT-PCR
+                        systems, clinical laboratory equipment, point-of-care solutions
+                        and everyday consumables — installed, calibrated and supported
+                        with a 48-hour service SLA across India.
                     </motion.p>
 
                     <motion.div

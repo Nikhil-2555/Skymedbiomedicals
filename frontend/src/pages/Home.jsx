@@ -10,8 +10,8 @@ export default function Home() {
     return (
         <>
             <Seo
-                title="Skymed Biomedicals — Precision Lab Equipment & Surgical Consumables"
-                description="An organised catalog of laboratory equipment and sterile surgical consumables, backed by installation, calibration and maintenance for research institutions and hospitals."
+                title="Skymed Biomedical — Delivering Precision. Empowering Healthcare."
+                description="Your trusted partner for advanced diagnostic and laboratory solutions — molecular diagnostics, RT-PCR, clinical equipment, POC and consumables. Established 2021."
             />
             <Hero />
             <EditorialMarquee />
