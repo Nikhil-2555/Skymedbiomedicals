@@ -54,7 +54,7 @@ export default function ProductDetail() {
                     <ArrowLeft size={16} weight="bold" /> All products
                 </button>
 
-                <div className={product.image ? "grid lg:grid-cols-2 gap-8 lg:gap-14 items-start" : ""}>
+                <div className={product.image ? "grid lg:grid-cols-2 gap-8 lg:gap-14 items-start" : "grid lg:grid-cols-[1.5fr_1fr] gap-8 lg:gap-14 items-start"}>
                     {/* Image — only when a real product photo is provided */}
                     {product.image && (
                     <motion.div
@@ -74,12 +74,11 @@ export default function ProductDetail() {
                     </motion.div>
                     )}
 
-                    {/* Details */}
+                    {/* Details — main column */}
                     <motion.div
                         initial={{ opacity: 0, y: 24 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                        className={product.image ? "" : "max-w-3xl"}
                     >
                         <div className="flex items-center gap-3 mb-4">
                             <p className="overline text-[#0f4c81]">{product.category}</p>
@@ -118,46 +117,104 @@ export default function ProductDetail() {
                             </div>
                         </div>
 
-                        {/* Features */}
-                        <div className="mt-8">
-                            <p className="overline mb-4">Highlights</p>
-                            <ul className="space-y-3">
-                                {product.features.map((f) => (
-                                    <li key={f} className="flex items-start gap-3">
-                                        <CheckCircle size={20} weight="fill" className="text-[#0f4c81] shrink-0 mt-0.5" />
-                                        <span className="text-[#0a0a0a]">{f}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        {/* When product has an image, highlights + contact live in this same column */}
+                        {product.image && (
+                            <>
+                                <div className="mt-8">
+                                    <p className="overline mb-4">Highlights</p>
+                                    <ul className="space-y-3">
+                                        {product.features.map((f) => (
+                                            <li key={f} className="flex items-start gap-3">
+                                                <CheckCircle size={20} weight="fill" className="text-[#0f4c81] shrink-0 mt-0.5" />
+                                                <span className="text-[#0a0a0a]">{f}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
 
-                        {/* Contact block — no price displayed anywhere */}
-                        <div className="mt-10 border border-[#e4e4e7] bg-white p-6">
-                            <p className="font-display font-bold text-xl tracking-tight text-[#0a0a0a]">
-                                Enquire for pricing & availability
-                            </p>
-                            <p className="mt-2 text-sm text-[#52525b]">
-                                For a quotation, availability or technical guidance on the{" "}
-                                <span className="font-mono">{product.code}</span>, reach us directly.
-                            </p>
-                            <div className="mt-5 flex flex-wrap gap-3">
-                                <a
-                                    data-testid="detail-call"
-                                    href={CONTACT.phoneHref}
-                                    className="flex items-center gap-2 bg-[#0a0a0a] hover:bg-[#0f4c81] transition-colors text-white text-sm font-semibold px-5 py-3 rounded-full"
-                                >
-                                    <Phone size={15} weight="fill" /> {CONTACT.phone}
-                                </a>
-                                <a
-                                    data-testid="detail-email"
-                                    href={CONTACT.emailHref}
-                                    className="flex items-center gap-2 border border-[#0a0a0a] hover:bg-[#0a0a0a] hover:text-white transition-colors text-sm font-semibold px-5 py-3 rounded-full"
-                                >
-                                    <EnvelopeSimple size={15} weight="fill" /> Email enquiry
-                                </a>
-                            </div>
-                        </div>
+                                <div className="mt-10 border border-[#e4e4e7] bg-white p-6">
+                                    <p className="font-display font-bold text-xl tracking-tight text-[#0a0a0a]">
+                                        Enquire for pricing & availability
+                                    </p>
+                                    <p className="mt-2 text-sm text-[#52525b]">
+                                        For a quotation, availability or technical guidance on the{" "}
+                                        <span className="font-mono">{product.code}</span>, reach us directly.
+                                    </p>
+                                    <div className="mt-5 flex flex-wrap gap-3">
+                                        <a
+                                            data-testid="detail-call"
+                                            href={CONTACT.phoneHref}
+                                            className="flex items-center gap-2 bg-[#0a0a0a] hover:bg-[#0f4c81] transition-colors text-white text-sm font-semibold px-5 py-3 rounded-full"
+                                        >
+                                            <Phone size={15} weight="fill" /> {CONTACT.phone}
+                                        </a>
+                                        <a
+                                            data-testid="detail-email"
+                                            href={CONTACT.emailHref}
+                                            className="flex items-center gap-2 border border-[#0a0a0a] hover:bg-[#0a0a0a] hover:text-white transition-colors text-sm font-semibold px-5 py-3 rounded-full"
+                                        >
+                                            <EnvelopeSimple size={15} weight="fill" /> Email enquiry
+                                        </a>
+                                    </div>
+                                </div>
+                            </>
+                        )}
                     </motion.div>
+
+                    {/* Right sidebar — only when NO image; uses the empty right space */}
+                    {!product.image && (
+                        <motion.aside
+                            initial={{ opacity: 0, y: 24 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                            className="lg:sticky lg:top-28 space-y-6"
+                        >
+                            <div className="border border-[#e4e4e7] bg-white p-6">
+                                <p className="overline text-[#0f4c81] mb-4">Highlights</p>
+                                <ul className="space-y-3">
+                                    {product.features.map((f) => (
+                                        <li key={f} className="flex items-start gap-3">
+                                            <CheckCircle size={18} weight="fill" className="text-[#0f4c81] shrink-0 mt-0.5" />
+                                            <span className="text-sm text-[#0a0a0a] leading-snug">{f}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div className="border border-[#e4e4e7] bg-[#0a0a0a] text-white p-6">
+                                <p className="font-display font-bold text-xl tracking-tight">
+                                    Enquire for pricing & availability
+                                </p>
+                                <p className="mt-2 text-sm text-white/60 leading-relaxed">
+                                    For a quotation, availability or technical guidance on the{" "}
+                                    <span className="font-mono text-white/80">{product.code}</span>, reach us directly.
+                                </p>
+                                <div className="mt-5 flex flex-col gap-2">
+                                    <a
+                                        data-testid="detail-call"
+                                        href={CONTACT.phoneHref}
+                                        className="flex items-center justify-center gap-2 bg-white text-[#0a0a0a] hover:bg-[#4a90d9] hover:text-white transition-colors text-sm font-semibold px-5 py-3 rounded-full"
+                                    >
+                                        <Phone size={15} weight="fill" /> {CONTACT.phone}
+                                    </a>
+                                    <a
+                                        data-testid="detail-email"
+                                        href={CONTACT.emailHref}
+                                        className="flex items-center justify-center gap-2 border border-white/25 hover:bg-white/10 transition-colors text-sm font-semibold px-5 py-3 rounded-full"
+                                    >
+                                        <EnvelopeSimple size={15} weight="fill" /> Email enquiry
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="border border-[#e4e4e7] bg-white p-6">
+                                <p className="overline mb-3">Delivery</p>
+                                <p className="text-sm text-[#0a0a0a] leading-relaxed">
+                                    Ready stock — same-week dispatch across India for standard orders. Bulk & scheduled deliveries on request.
+                                </p>
+                            </div>
+                        </motion.aside>
+                    )}
                 </div>
 
                 {/* Related */}
