@@ -124,10 +124,14 @@ export default function ProductDetail() {
                         {/* Contact block */}
                         <div className="mt-10 border border-[#e4e4e7] bg-white p-6">
                             <p className="font-display font-bold text-xl tracking-tight text-[#0a0a0a]">
-                                Pricing on request — {product.price}
+                                {product.price === "On request"
+                                    ? "Pricing on request"
+                                    : `Price — ${product.price}`}
                             </p>
                             <p className="mt-2 text-sm text-[#52525b]">
-                                For a quotation, availability or technical guidance on the{" "}
+                                {product.price === "On request"
+                                    ? `For a quotation, availability or technical guidance on the`
+                                    : `GST extra as applicable. For availability or bulk pricing on the`}{" "}
                                 <span className="font-mono">{product.code}</span>, reach us directly.
                             </p>
                             <div className="mt-5 flex flex-wrap gap-3">
