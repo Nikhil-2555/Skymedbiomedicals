@@ -229,7 +229,7 @@ export const PRODUCTS = [
         name: "Haemoflash",
         category: "Polymed",
         tagline: "Flashback needle — Polymed.",
-        image: "",
+        image: "https://customer-assets-39nsmqrw.emergentagent.net/job_lab-solutions-hub-1/artifacts/rdotqg6h_Haemoflash-2-1-300x300-1.webp",
         code: "SB-PM010",
         specs: [
             { label: "Brand", value: "Polymed" },
@@ -273,7 +273,7 @@ export const PRODUCTS = [
         name: "Lithium Heparin Tubes",
         category: "Polymed",
         tagline: "Lithium Heparin tubes — Polymed.",
-        image: "",
+        image: "https://customer-assets-39nsmqrw.emergentagent.net/job_lab-solutions-hub-1/artifacts/6dhlj6vb_Lithium-Heparin-Tubes-88-600x691.webp",
         code: "SB-PM012",
         specs: [
             { label: "Brand", value: "Polymed" },
@@ -339,7 +339,7 @@ export const PRODUCTS = [
         name: "Hematology (EDTA K3) Tube",
         category: "Polymed",
         tagline: "EDTA K3 haematology tube — Polymed.",
-        image: "",
+        image: "https://customer-assets-39nsmqrw.emergentagent.net/job_lab-solutions-hub-1/artifacts/qk5eq62y_Hematology-EDTA-K3-Tube-85-600x819.webp",
         code: "SB-PM015",
         specs: [
             { label: "Brand", value: "Polymed" },
@@ -361,7 +361,7 @@ export const PRODUCTS = [
         name: "Hematology (EDTA K2) Tube",
         category: "Polymed",
         tagline: "EDTA K2 haematology tube — Polymed.",
-        image: "",
+        image: "https://customer-assets-39nsmqrw.emergentagent.net/job_lab-solutions-hub-1/artifacts/44ikerje_Hematology-EDTA-K2-Tube-84-600x893.webp",
         code: "SB-PM016",
         specs: [
             { label: "Brand", value: "Polymed" },
