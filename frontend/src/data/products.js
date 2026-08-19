@@ -295,7 +295,7 @@ export const PRODUCTS = [
         name: "Sodium Heparin Tubes",
         category: "Polymed",
         tagline: "Sodium Heparin tubes — Polymed.",
-        image: "",
+        image: "https://customer-assets-39nsmqrw.emergentagent.net/job_lab-solutions-hub-1/artifacts/x6iqsj02_Sodium-Heparin-Tubes-87-600x743.webp",
         code: "SB-PM013",
         specs: [
             { label: "Brand", value: "Polymed" },
@@ -317,7 +317,7 @@ export const PRODUCTS = [
         name: "Glucose Estimation Tubes",
         category: "Polymed",
         tagline: "Glucose estimation tubes — Polymed.",
-        image: "",
+        image: "https://customer-assets-39nsmqrw.emergentagent.net/job_lab-solutions-hub-1/artifacts/1x27k0xs_Glucose-Estimation-Tubes-86-600x733.webp",
         code: "SB-PM014",
         specs: [
             { label: "Brand", value: "Polymed" },
@@ -428,7 +428,7 @@ export const PRODUCTS = [
         name: "Serum Separating Tube with Gel Separator",
         category: "Polymed",
         tagline: "Serum tube with gel — Polymed.",
-        image: "",
+        image: "https://customer-assets-39nsmqrw.emergentagent.net/job_lab-solutions-hub-1/artifacts/agq81hel_Serum-Separating-Tube-with-Gel-Separator-81-600x924.webp",
         code: "SB-PM019",
         specs: [
             { label: "Brand", value: "Polymed" },
@@ -450,7 +450,7 @@ export const PRODUCTS = [
         name: "Serum Tubes",
         category: "Polymed",
         tagline: "Plain serum tube — Polymed.",
-        image: "",
+        image: "https://customer-assets-39nsmqrw.emergentagent.net/job_lab-solutions-hub-1/artifacts/kedf9plh_Serum-Tubes-80-600x836.webp",
         code: "SB-PM020",
         specs: [
             { label: "Brand", value: "Polymed" },
