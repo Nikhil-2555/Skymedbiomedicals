@@ -47,6 +47,8 @@ export const Catalog = () => {
     const filtered = useMemo(() => {
         const q = query.trim().toLowerCase();
         return PRODUCTS.filter((p) => {
+            // "Other" products are only visible when the user explicitly opens the "Other" tab.
+            if (active === "All" && p.category === "Other") return false;
             const matchCat = active === "All" || p.category === active;
             const matchQ =
                 !q ||
