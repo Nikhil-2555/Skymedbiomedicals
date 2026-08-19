@@ -28,7 +28,7 @@ const SkeletonCard = ({ i }) => (
 );
 
 export const Catalog = () => {
-    const [active, setActive] = useState("All");
+    const [active, setActive] = useState("Molecular Diagnostics");
     const [query, setQuery] = useState("");
     const [loading, setLoading] = useState(false);
     const firstRun = useRef(true);
@@ -47,13 +47,10 @@ export const Catalog = () => {
     const filtered = useMemo(() => {
         const q = query.trim().toLowerCase();
         return PRODUCTS.filter((p) => {
-            // "Other" products are only visible when the user explicitly opens the "Other" tab.
-            if (active === "All" && p.category === "Other") return false;
-            const matchCat = active === "All" || p.category === active;
+            const matchCat = p.category === active;
             const matchQ =
                 !q ||
                 p.name.toLowerCase().includes(q) ||
-                p.category.toLowerCase().includes(q) ||
                 p.code.toLowerCase().includes(q);
             return matchCat && matchQ;
         });
@@ -165,16 +162,8 @@ export const Catalog = () => {
                 {PRODUCTS.length > 0 && (
                 <div className="flex items-center justify-between mb-6">
                     <p className="font-mono text-xs text-[#52525b]" data-testid="result-count">
-                        {String(filtered.length).padStart(2, "0")} / {PRODUCTS.length} shown
+                        {String(filtered.length).padStart(2, "0")} in {active}
                     </p>
-                    {active !== "All" && (
-                        <button
-                            onClick={() => setActive("All")}
-                            className="font-mono text-xs text-[#0f4c81] hover:underline"
-                        >
-                            Clear filter ✕
-                        </button>
-                    )}
                 </div>
                 )}
 

@@ -10,7 +10,6 @@
 //   4. Set `image` to a URL to render as a card, or "" to render as a list row.
 
 export const CATEGORIES = [
-    "All",
     "Molecular Diagnostics",
     "Mindray Hematology",
     "Polymed",
