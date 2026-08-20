@@ -95,7 +95,7 @@ export const PRODUCTS = [
         name: "Mindray BC-20 Auto Hematology Analyzer",
         category: "Mindray Hematology",
         tagline: "3-part hematology analyzer — Mindray.",
-        image: "",
+        image: "https://images.unsplash.com/photo-1581091007718-0c50d599bfd0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHw0fHxiaW9tZWRpY2FsJTIwZXF1aXBtZW50JTIwbWljcm9zY29wZXxlbnwwfHx8fDE3ODUzMDE4MDN8MA&ixlib=rb-4.1.0&q=85",
         code: "SB-MH004",
         specs: [
             { label: "Brand", value: "Mindray" },
@@ -119,7 +119,7 @@ export const PRODUCTS = [
         name: "Mindray BC-700 Hematology & ESR Analyzer",
         category: "Mindray Hematology",
         tagline: "7-part hematology + ESR — Mindray.",
-        image: "",
+        image: "https://images.unsplash.com/photo-1526930382372-67bf22c0fce2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxiaW9tZWRpY2FsJTIwZXF1aXBtZW50JTIwbWljcm9zY29wZXxlbnwwfHx8fDE3ODUzMDE4MDN8MA&ixlib=rb-4.1.0&q=85",
         code: "SB-MH005",
         specs: [
             { label: "Brand", value: "Mindray" },
@@ -143,7 +143,7 @@ export const PRODUCTS = [
         name: "Mindray BC-720 Auto Hematology Analyzer",
         category: "Mindray Hematology",
         tagline: "5-part hematology analyzer — Mindray.",
-        image: "",
+        image: "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxzY2llbnRpc3QlMjB3b3JraW5nJTIwaW4lMjBsYWJ8ZW58MHx8fHwxNzg1MzAxODAzfDA&ixlib=rb-4.1.0&q=85",
         code: "SB-MH006",
         specs: [
             { label: "Brand", value: "Mindray" },
@@ -167,7 +167,7 @@ export const PRODUCTS = [
         name: "Mindray BC-760 Auto Hematology Analyzer",
         category: "Mindray Hematology",
         tagline: "5-part hematology with reticulocyte — Mindray.",
-        image: "",
+        image: "https://images.unsplash.com/photo-1775504982885-b0c0f089a0bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsYWJvcmF0b3J5JTIwaW50ZXJpb3J8ZW58MHx8fHwxNzg1MzAxODAzfDA&ixlib=rb-4.1.0&q=85",
         code: "SB-MH007",
         specs: [
             { label: "Brand", value: "Mindray" },
@@ -191,7 +191,7 @@ export const PRODUCTS = [
         name: "Mindray BC-780 Auto Hematology Analyzer",
         category: "Mindray Hematology",
         tagline: "6-part hematology with reticulocyte — Mindray.",
-        image: "",
+        image: "https://images.unsplash.com/photo-1581091007718-0c50d599bfd0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHw0fHxiaW9tZWRpY2FsJTIwZXF1aXBtZW50JTIwbWljcm9zY29wZXxlbnwwfHx8fDE3ODUzMDE4MDN8MA&ixlib=rb-4.1.0&q=85",
         code: "SB-MH008",
         specs: [
             { label: "Brand", value: "Mindray" },
@@ -215,7 +215,7 @@ export const PRODUCTS = [
         name: "Mindray BS-230 Fully-Auto Biochemistry Analyzer",
         category: "Mindray Hematology",
         tagline: "Biochemistry analyzer — Mindray.",
-        image: "",
+        image: "https://images.unsplash.com/photo-1526930382372-67bf22c0fce2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxiaW9tZWRpY2FsJTIwZXF1aXBtZW50JTIwbWljcm9zY29wZXxlbnwwfHx8fDE3ODUzMDE4MDN8MA&ixlib=rb-4.1.0&q=85",
         code: "SB-MH009",
         specs: [
             { label: "Brand", value: "Mindray" },
@@ -239,7 +239,7 @@ export const PRODUCTS = [
         name: "Mindray BS-240 Fully-Auto Biochemistry Analyzer",
         category: "Mindray Hematology",
         tagline: "Biochemistry analyzer — Mindray.",
-        image: "",
+        image: "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxzY2llbnRpc3QlMjB3b3JraW5nJTIwaW4lMjBsYWJ8ZW58MHx8fHwxNzg1MzAxODAzfDA&ixlib=rb-4.1.0&q=85",
         code: "SB-MH010",
         specs: [
             { label: "Brand", value: "Mindray" },
@@ -263,7 +263,7 @@ export const PRODUCTS = [
         name: "Mindray BS-240E Fully-Auto Biochemistry Analyzer",
         category: "Mindray Hematology",
         tagline: "Biochemistry analyzer, economy — Mindray.",
-        image: "",
+        image: "https://images.unsplash.com/photo-1775504982885-b0c0f089a0bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsYWJvcmF0b3J5JTIwaW50ZXJpb3J8ZW58MHx8fHwxNzg1MzAxODAzfDA&ixlib=rb-4.1.0&q=85",
         code: "SB-MH011",
         specs: [
             { label: "Brand", value: "Mindray" },
@@ -287,7 +287,7 @@ export const PRODUCTS = [
         name: "Mindray BS-430 Fully-Auto Biochemistry Analyzer",
         category: "Mindray Hematology",
         tagline: "High-throughput biochemistry — Mindray.",
-        image: "",
+        image: "https://images.unsplash.com/photo-1581091007718-0c50d599bfd0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHw0fHxiaW9tZWRpY2FsJTIwZXF1aXBtZW50JTIwbWljcm9zY29wZXxlbnwwfHx8fDE3ODUzMDE4MDN8MA&ixlib=rb-4.1.0&q=85",
         code: "SB-MH012",
         specs: [
             { label: "Brand", value: "Mindray" },
@@ -311,7 +311,7 @@ export const PRODUCTS = [
         name: "Mindray BA-88A Semi-Auto Biochemistry Analyzer",
         category: "Mindray Hematology",
         tagline: "Semi-auto biochemistry analyzer — Mindray.",
-        image: "",
+        image: "https://images.unsplash.com/photo-1526930382372-67bf22c0fce2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxiaW9tZWRpY2FsJTIwZXF1aXBtZW50JTIwbWljcm9zY29wZXxlbnwwfHx8fDE3ODUzMDE4MDN8MA&ixlib=rb-4.1.0&q=85",
         code: "SB-MH013",
         specs: [
             { label: "Brand", value: "Mindray" },
@@ -335,7 +335,7 @@ export const PRODUCTS = [
         name: "Mindray CL-900i Chemiluminescence Immunoassay Analyzer",
         category: "Mindray Hematology",
         tagline: "Chemiluminescence immunoassay — Mindray.",
-        image: "",
+        image: "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxzY2llbnRpc3QlMjB3b3JraW5nJTIwaW4lMjBsYWJ8ZW58MHx8fHwxNzg1MzAxODAzfDA&ixlib=rb-4.1.0&q=85",
         code: "SB-MH014",
         specs: [
             { label: "Brand", value: "Mindray" },
