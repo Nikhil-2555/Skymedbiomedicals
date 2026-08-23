@@ -1,0 +1,163 @@
+NOTE: The specification fields below (throughput, parameters, etc.) were compiled from general product knowledge, not a live web search — this session did not have web search enabled. Please verify exact figures against Mindray's official datasheets before publishing this anywhere official. Pricing is intentionally left out, per request.
+
+
+                                                                              CHEMILUMINESCENCE IMMUNOASSAY
+CL 900i(https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/chemiluminescence-immunoassay/small-test-volume/cl-900i/glp61-s2.jpg)
+As one of the world’s smallest, fully automated chemiluminescence immunoassay analyzers, the CL-900i integrates a large capacity and fast assay speed into a compact model, achieving a perfect balance between size and immunoassay testing performance.
+Today, laboratories not only need more reliable routine Immunoassay testing by way of high processing speed, reproducibility,  dependability, accuracy & quality for wider clinical correlation and diagnosis. On the other hand, they are restricted by limited budgets. CL-900i can help to meet all these needs just perfectly and even exceed the expectations.
+
+TECHNICAL SPECIFICATIONS
+Brand: Mindray
+Model: CL-900i Chemiluminescence Immunoassay Analyzer
+Throughput: approx. 180 tests/hour (check current datasheet)
+Parameters: Broad immunoassay menu - thyroid function, tumor markers, infectious disease, reproductive hormones, cardiac markers, and more
+Category: Small-test-volume Chemiluminescence Immunoassay
+
+HIGHLIGHTS
+✓ One of the smallest fully automated CLIA analyzers on the market
+✓ Magnetic microparticle-based chemiluminescence technology
+✓ Compact footprint suited to space- and budget-constrained labs
+
+
+                                                                                         HEMATOLOGY
+BC 20s(https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/hematology/small-test-volume/bc-20s/glp8-s1-web.jpg)
+At Mindray we pride ourselves on our dedication and experience in developing better solutions for small labs. Our new line of 3-part hematology analyzers is the culmination of that effort. Compact yet powerful, full featured yet affordable, the BC-20s is what a 3-part analyzer should be.
+
+TECHNICAL SPECIFICATIONS
+Brand: Mindray
+Model: BC-20s 3-Part Differential Hematology Analyzer
+Throughput: approx. 60 samples/hour
+Parameters: 3-part WBC differential (Lymph/Mid/Gran) plus standard CBC parameters
+Category: Small-test-volume Hematology
+
+HIGHLIGHTS
+✓ Compact, full-featured 3-part analyzer built for small labs
+✓ Whole blood and pre-dilute aspiration modes
+✓ Affordable entry point into automated hematology testing
+
+
+BC 5130(https://www.mindray.com/content/dam/xpace/en_in/products/laboratory-diagnostics/hematology/5-part-differential-analyzers/bc-5130/p2.jpg)
+Based on Mindray’s continuous innovation in hematology field, BC-5130 is especially tailored to assist diagnostic labs who need full CBC + 5-part results, with relatively low daily sample volume, restricted lab space and tight budget.
+As the lightest and most compact 5-part hematology analyzer so far from Mindray, BC-5130 is a highly user-friendly and innovative analyzer that offers cost efficient CBC and 5-part white cell differential results. It is targeted to fulfill and exceed the demands of our global customers by providing more accurate, more efficient and more innovative solutions for labs.
+
+TECHNICAL SPECIFICATIONS
+Brand: Mindray
+Model: BC-5130 5-Part Differential Hematology Analyzer
+Throughput: approx. 60 samples/hour
+Parameters: 5-part WBC differential (SF Cube technology) plus full CBC
+Category: Small-test-volume, 5-Part Differential Hematology
+
+HIGHLIGHTS
+✓ Lightest, most compact 5-part analyzer in Mindray’s range
+✓ Full CBC + 5-part differential results in a small footprint
+✓ Built for space- and budget-restricted diagnostic labs
+
+
+BC720(https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/hematology/medium-test-volume/bc-700-series/bc-700-series-fig1-pc.jpg)
+
+TECHNICAL SPECIFICATIONS
+Brand: Mindray
+Model: BC-720 Hematology Analyzer (BC-700 Series)
+Throughput: Medium-volume class, higher than BC-5130 (check current datasheet for exact rate)
+Parameters: 5-part WBC differential plus full CBC
+Category: Medium-test-volume Hematology
+
+HIGHLIGHTS
+✓ Entry model in Mindray’s medium-volume BC-700 series
+✓ Higher daily sample throughput than compact 5-part analyzers
+✓ Shares reagent platform with BC-760/BC-780 for easier lab standardization
+
+
+BC760 & 780 (https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/hematology/medium-test-volume/bc-700-series/bc-700-series-fig1-pc.jpg)
+
+TECHNICAL SPECIFICATIONS
+Brand: Mindray
+Model: BC-760 / BC-780 Hematology Analyzers (BC-700 Series)
+Throughput: Medium-volume class, higher tier than BC-720 (check current datasheet for exact rate)
+Parameters: 5-part WBC differential plus full CBC, with expanded parameters on higher models
+Category: Medium-test-volume Hematology
+
+HIGHLIGHTS
+✓ Higher-spec models within the BC-700 series
+✓ Suited to medium-workload labs needing more throughput or features
+✓ Shared platform with BC-720 for streamlined lab operations
+
+
+                                                                                      BIOCHEMISTRY
+BS 230(https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/chemistry/small-test-volume/bs-230/glp31-s1-web.jpg)
+BS-230 is a “CUTE”, multi-functional benchtop chemistry analyzer with a throughput of 200 tests per hour. Though with a compact size, it has achieved a host of advanced functions never before found on alike products in the market, making it an optimal chemistry solution for small laboratories and a back-up tool for mid-to-high volume laboratories.
+
+TECHNICAL SPECIFICATIONS
+Brand: Mindray
+Model: BS-230 Fully-Auto Biochemistry Analyzer
+Throughput: 200 tests/hour (up to 240 with optional ISE module)
+Parameters: Photometric, plus optional ISE (Na/K/Cl)
+Category: Small-test-volume Biochemistry
+
+HIGHLIGHTS
+✓ Random access with STAT priority
+✓ Reagent barcode recognition
+✓ Long-life halogen lamp with 12 wavelengths
+
+
+BS 240(https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/chemistry/small-test-volume/bs-240/glp23-s2-web.jpg)
+BS-240 is a “CUTE”, multi-functional benchtop chemistry analyzer with a throughput of 200 tests per hour. Though with a compact size, it has achieved a host of advanced functions never before found on alike products in the market, making it an optimal chemistry solution for small laboratories and a back-up tool for mid-to-high volume laboratories.
+
+TECHNICAL SPECIFICATIONS
+Brand: Mindray
+Model: BS-240 Benchtop Chemistry Analyzer
+Throughput: 200 tests/hour
+Parameters: Photometric biochemistry panel
+Category: Small-test-volume Biochemistry
+
+HIGHLIGHTS
+✓ Compact, multi-functional benchtop design
+✓ Works as a primary analyzer for small labs or backup for larger ones
+✓ Advanced functionality uncommon in similarly sized analyzers
+
+
+BS240E(https://mindray.scene7.com/is/image/mindray/bs-240e-kv-pc-1.0-in?scl=1)
+
+TECHNICAL SPECIFICATIONS
+Brand: Mindray
+Model: BS-240E Benchtop Chemistry Analyzer
+Throughput: In line with BS-240 (check current datasheet for exact rate)
+Parameters: Photometric biochemistry panel
+Category: Small-test-volume Biochemistry
+
+HIGHLIGHTS
+✓ Updated/regional variant of the BS-240 platform
+✓ Compact benchtop design for small-to-mid volume labs
+
+
+BS 430(https://www.mindray.com/content/dam/xpace/en_in/products-solutions/products/laboratory-diagnostics/chemistry/medium-test-volume/bs-430/glp37-s1-web.jpg)
+As the new flagship stand-alone chemistry analyzer of Mindray, BS-430 achieves a perfect balance between size and throughput with uniform reagent package and software.
+BS-430 is a perfect solution for small to mid-workload laboratories which need a one-stop chemistry solution with high reliability and cost efficiency
+
+TECHNICAL SPECIFICATIONS
+Brand: Mindray
+Model: BS-430 Chemistry Analyzer
+Throughput: Higher than BS-230/BS-240, medium-volume flagship (check current datasheet for exact rate)
+Parameters: Uniform reagent package and software shared across Mindray's chemistry range
+Category: Medium-test-volume Biochemistry
+
+HIGHLIGHTS
+✓ Balance of size and throughput for small-to-mid workload labs
+✓ One-stop chemistry solution with high reliability
+✓ Cost-efficient operation via shared reagent platform
+
+
+BA 88(https://www.mindray.com/content/dam/xpace/en_in/products-solutions/products/laboratory-diagnostics/chemistry/small-test-volume/ba-88a/glp31-s1-web.jpg)
+A semi-automatic chemistry analyzer with large touch-screen and  easy-to-use operation software
+
+TECHNICAL SPECIFICATIONS
+Brand: Mindray
+Model: BA-88A Semi-Automatic Chemistry Analyzer
+Throughput: Semi-automatic, manual sample/reagent loading (check current datasheet for rate)
+Parameters: Photometric biochemistry tests
+Category: Small-test-volume Biochemistry
+
+HIGHLIGHTS
+✓ Large touch-screen interface
+✓ Easy-to-use operation software
+✓ Economical option for low-volume or decentralized testing
