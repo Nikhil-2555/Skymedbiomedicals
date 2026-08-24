@@ -29,7 +29,6 @@ export const Testimonials = () => {
         if (paused) return;
         const id = setInterval(next, AUTOPLAY_MS);
         return () => clearInterval(id);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [paused, i]);
 
     return (
