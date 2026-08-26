@@ -19,11 +19,11 @@ export const COMMITMENTS = [
 ];
 
 export const CONTACT = {
-    phone: "+91 98200 41000",
-    phoneHref: "tel:+919820041000",
-    email: "hello@skymedbiomedical.com",
-    emailHref: "mailto:hello@skymedbiomedical.com",
-    address: "Plot 42, Life Sciences Park, Andheri East, Mumbai 400093",
+    phone: "+91 99090 12390",
+    phoneHref: "tel:+919909012390",
+    email: "skymedbiomedical@gmail.com",
+    emailHref: "mailto:skymedbiomedical@gmail.com",
+    address: "Skymed Biomedical, Shop No.E11 & E12, Chandanpark Society, Behind Virmaya Sankul, Near Kadi Nagrik Char Rasta, Chandkheda, Ahmedabad - 382424. GSTIN: 24BTXPM1741F1ZI",
     hours: "Mon – Sat · 09:00 – 19:00 IST",
 };
 

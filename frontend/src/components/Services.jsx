@@ -55,20 +55,22 @@ export const Services = () => {
                                 transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
                                 className="group py-9 border-b border-[#e4e4e7]"
                             >
-                                <div className="flex items-start gap-6">
-                                    <span className="font-display font-black text-5xl sm:text-6xl tracking-tighter leading-none text-[#e4e4e7] group-hover:text-[#0f4c81] transition-colors duration-300">
-                                        {s.no}
-                                    </span>
-                                    <div className="flex-1">
-                                        <h3 className="font-display font-bold text-2xl tracking-tight text-[#0a0a0a] flex items-center gap-2">
+                                <div>
+                                    <div className="flex items-center gap-4 sm:gap-6">
+                                        <span className="font-display font-black text-5xl sm:text-6xl tracking-tighter leading-none text-[#e4e4e7] group-hover:text-[#0f4c81] transition-colors duration-300 shrink-0">
+                                            {s.no}
+                                        </span>
+                                        <h3 className="font-display font-bold text-xl sm:text-2xl tracking-tight text-[#0a0a0a] flex items-center gap-2">
                                             {s.title}
                                             <ArrowRight
                                                 size={20}
                                                 weight="bold"
-                                                className="text-[#0f4c81] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                                                className="text-[#0f4c81] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 shrink-0"
                                             />
                                         </h3>
-                                        <p className="mt-3 text-[#52525b] leading-relaxed">
+                                    </div>
+                                    <div className="mt-4 sm:mt-2 sm:pl-[84px]">
+                                        <p className="text-[#52525b] leading-relaxed">
                                             {s.summary}
                                         </p>
                                         <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2">

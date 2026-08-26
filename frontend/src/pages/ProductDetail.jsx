@@ -13,6 +13,9 @@ export default function ProductDetail() {
     const product = getProductBySlug(slug);
 
     useEffect(() => {
+        if (window.__lenis) {
+            window.__lenis.scrollTo(0, { immediate: true });
+        }
         window.scrollTo(0, 0);
     }, [slug]);
 

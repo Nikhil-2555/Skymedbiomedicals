@@ -16,7 +16,7 @@ export const AboutContact = () => {
             className="grain relative bg-[#0a0a0a] text-white py-20 sm:py-28 scroll-mt-20 overflow-hidden"
         >
             <div className="relative z-10 mx-auto max-w-[1400px] px-5 sm:px-8">
-                <p className="overline text-white/40 mb-6">05 — About & Contact</p>
+                <p className="overline text-white/40 mb-6">04 — About & Contact</p>
 
                 <div className="grid lg:grid-cols-[1.2fr_1fr] gap-14 lg:gap-20">
                     <motion.div

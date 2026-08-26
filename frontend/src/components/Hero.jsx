@@ -22,7 +22,7 @@ const fade = {
     }),
 };
 
-const HEADLINE = ["Precision in", "every variable", "of medicine."];
+const HEADLINE = ["Your trusted partner", "for advanced diagnostic", "and laboratory solutions"];
 
 export const Hero = () => {
     const ref = useRef(null);
@@ -50,7 +50,7 @@ export const Hero = () => {
                     animate="show"
                     className="overline mb-6"
                 >
-                    Established 2021 · Delivering Precision · Empowering Healthcare
+                Committed to Quality, Focused on Innovation, Dedicated to Healthcare.
                 </motion.p>
 
                 <h1 className="hero-headline font-display font-black text-[#0a0a0a]">
@@ -65,8 +65,8 @@ export const Hero = () => {
                             >
                                 {i === 2 ? (
                                     <>
-                                        {"of "}
-                                        <span className="text-[#0f4c81]">medicine.</span>
+                                        {"and laboratory "}
+                                        <span className="text-[#0f4c81]">solutions.</span>
                                     </>
                                 ) : (
                                     l

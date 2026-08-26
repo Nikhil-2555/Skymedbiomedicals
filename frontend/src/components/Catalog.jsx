@@ -95,7 +95,7 @@ export const Catalog = () => {
                     className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between mb-8 border-y border-[#e4e4e7] py-5"
                 >
                     {/* Desktop chips with sliding indicator */}
-                    <div className="hidden md:flex flex-wrap gap-1">
+                    <div className="hidden md:flex flex-wrap gap-1 md:order-1">
                         {CATEGORIES.map((c) => {
                             const isActive = active === c;
                             return (
@@ -121,7 +121,7 @@ export const Catalog = () => {
                     </div>
 
                     {/* Mobile select */}
-                    <div className="md:hidden">
+                    <div className="md:hidden order-2">
                         <Select value={active} onValueChange={setActive}>
                             <SelectTrigger
                                 data-testid="category-select"
@@ -141,7 +141,7 @@ export const Catalog = () => {
 
                     {/* Search — only when catalog has products */}
                     {PRODUCTS.length > 0 && (
-                    <div className="relative md:w-72">
+                    <div className="relative md:w-72 order-1 md:order-2">
                         <MagnifyingGlass
                             size={17}
                             className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#52525b]"
