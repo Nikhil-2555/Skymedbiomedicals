@@ -148,8 +148,8 @@ export const Hero = () => {
                     </button>
                 </div>
 
-                {/* Stats bar — CSS grid auto-fit for smooth reflow */}
-                <div className="grid-stats border border-[#e4e4e7] bg-white divide-x divide-[#e4e4e7]">
+                {/* Stats bar */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 bg-white border-l border-t border-[#e4e4e7]">
                     {STATS.map((s, i) => (
                         <motion.div
                             key={s.label}
@@ -157,7 +157,7 @@ export const Hero = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-40px" }}
                             transition={{ duration: 0.6, delay: i * 0.08, ease: "easeOut" }}
-                            className="p-6 sm:p-8"
+                            className="p-6 sm:p-8 border-r border-b border-[#e4e4e7]"
                             data-testid={`stat-${i}`}
                         >
                             <div className="font-display font-black text-4xl sm:text-5xl tracking-tighter text-[#0a0a0a]">

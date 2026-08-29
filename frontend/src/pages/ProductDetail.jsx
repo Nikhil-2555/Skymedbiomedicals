@@ -84,7 +84,7 @@ export default function ProductDetail() {
                         transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                     >
                         <div className="flex items-center gap-3 mb-4">
-                            <p className="overline text-[#0f4c81]">{product.category}</p>
+                            <p className="overline text-[#0f4c81]">{product.subCategory || product.category}</p>
                             {!product.image && (
                                 <span className="font-mono text-[11px] tracking-wider text-[#52525b] border border-[#e4e4e7] px-2 py-0.5 rounded-full">
                                     {product.code}

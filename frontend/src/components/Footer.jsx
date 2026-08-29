@@ -27,10 +27,11 @@ export const Footer = () => {
             >
                 <div className="grid md:grid-cols-[1.4fr_1fr_1fr] gap-10 pb-14 border-b border-white/10">
                     <div>
-                        <div className="font-display font-extrabold text-2xl tracking-tight">
-                            {BRAND.name}
-                            <span className="text-[#4a90d9]">.</span>
-                        </div>
+                        <img 
+                            src={BRAND.logo} 
+                            alt={`${BRAND.name} Logo`} 
+                            className="h-16 w-auto object-contain bg-white p-2 rounded-md" 
+                        />
                         <p className="mt-4 max-w-sm text-white/60 leading-relaxed text-sm">
                             {BRAND.tagline}
                         </p>
@@ -63,7 +64,14 @@ export const Footer = () => {
                                     {CONTACT.email}
                                 </a>
                             </li>
-                            <li className="text-white/50 leading-relaxed pt-1">{CONTACT.address}</li>
+                            <li className="text-white/50 leading-relaxed pt-1">
+                                {CONTACT.address}
+                                {CONTACT.gstin && (
+                                    <div className="mt-2 font-mono text-[13px] text-white/60">
+                                        GSTIN: {CONTACT.gstin}
+                                    </div>
+                                )}
+                            </li>
                         </ul>
                     </div>
                 </div>

@@ -34,7 +34,7 @@ export const ProductRow = ({ product, index = 0 }) => {
                     <p className="mt-0.5 text-xs text-[#52525b] truncate">{type}</p>
                 </div>
                 <span className="hidden sm:block overline text-right">
-                    {brand || product.category}
+                    {brand || product.subCategory || product.category}
                 </span>
                 <span className="grid place-items-center w-9 h-9 rounded-full border border-[#e4e4e7] text-[#0a0a0a] group-hover:bg-[#0a0a0a] group-hover:text-white group-hover:border-[#0a0a0a] transition-colors">
                     <ArrowUpRight size={15} weight="bold" />

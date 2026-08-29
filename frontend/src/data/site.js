@@ -6,7 +6,7 @@ export const BRAND = {
     tagline: "Delivering precision. Empowering healthcare.",
     aboutLine:
         "Your trusted partner for advanced diagnostic & laboratory solutions.",
-    logo: "https://images.unsplash.com/photo-1762939079730-23708c0dd337?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGVjaG5vbG9neSUyMGxvZ298ZW58MHx8fHwxNzg1MzAxODEwfDA&ixlib=rb-4.1.0&q=85",
+    logo: "/sky_logo.webp",
     establishedYear: "2021",
 };
 
@@ -23,7 +23,8 @@ export const CONTACT = {
     phoneHref: "tel:+919909012390",
     email: "skymedbiomedical@gmail.com",
     emailHref: "mailto:skymedbiomedical@gmail.com",
-    address: "Skymed Biomedical, Shop No.E11 & E12, Chandanpark Society, Behind Virmaya Sankul, Near Kadi Nagrik Char Rasta, Chandkheda, Ahmedabad - 382424. GSTIN: 24BTXPM1741F1ZI",
+    address: "Skymed Biomedical, Shop No.E11 & E12, Chandanpark Society, Behind Virmaya Sankul, Near Kadi Nagrik Char Rasta, Chandkheda, Ahmedabad - 382424.",
+    gstin: "24BTXPM1741F1ZI",
     hours: "Mon – Sat · 09:00 – 19:00 IST",
 };
 
@@ -141,6 +142,5 @@ export const TESTIMONIALS = [
 export const NAV = [
     { label: "Catalog", id: "catalog" },
     { label: "Solutions", id: "services" },
-    { label: "Clients", id: "testimonials" },
     { label: "About", id: "about" },
 ];

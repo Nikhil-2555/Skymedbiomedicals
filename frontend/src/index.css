@@ -94,9 +94,9 @@ code,
 
 /* Fluid hero headline sizing */
 .hero-headline {
-    font-size: clamp(2.75rem, 10vw, 8.4rem);
-    line-height: 0.92;
-    letter-spacing: -0.035em;
+    font-size: clamp(2.75rem, 7.5vw, 6.5rem);
+    line-height: 1.03;
+    letter-spacing: -0.03em;
 }
 
 /* Responsive product grid using auto-fit for smooth reflow */
