@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { MARQUEE_ITEMS } from "@/data/site";
 
@@ -8,6 +8,20 @@ export const EditorialMarquee = () => {
         target: ref,
         offset: ["start end", "end start"],
     });
+
+    const [duration, setDuration] = useState(25);
+
+    useEffect(() => {
+        const updateSpeed = () => {
+            const w = window.innerWidth;
+            if (w < 480) setDuration(6);       // Mobile S/M/L - much faster
+            else if (w < 768) setDuration(10); // Tablets
+            else setDuration(20);              // Desktop
+        };
+        updateSpeed();
+        window.addEventListener("resize", updateSpeed);
+        return () => window.removeEventListener("resize", updateSpeed);
+    }, []);
 
     // Speed up marquee based on scroll velocity
     const rawSpeed = useTransform(scrollYProgress, [0, 0.5, 1], [20, 70, 20]);
@@ -29,7 +43,7 @@ export const EditorialMarquee = () => {
                 className="flex whitespace-nowrap will-change-transform"
                 animate={{ x: ["0%", "-50%"] }}
                 transition={{
-                    duration: 25,
+                    duration: duration,
                     ease: "linear",
                     repeat: Infinity,
                     repeatType: "loop",
