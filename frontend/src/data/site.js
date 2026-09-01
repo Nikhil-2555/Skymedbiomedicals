@@ -99,7 +99,7 @@ export const SERVICES = [
     },
     {
         no: "05",
-        title: "Laboratory Consumables & Accessories",
+        title: "CRO/LABORATORY CONSUMABLES AND ACCESORIES",
         summary:
             "Everyday lab essentials — gloves, syringes, tubes, tips, slides, containers and reagents — kept in ready stock for same-week dispatch across India.",
         points: [

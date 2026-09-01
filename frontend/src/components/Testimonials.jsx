@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quotes, ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import { TESTIMONIALS } from "@/data/site";
@@ -19,17 +19,17 @@ export const Testimonials = () => {
         setDir(-1);
         setI((v) => (v - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
     };
-    const next = () => {
+    const next = useCallback(() => {
         setDir(1);
         setI((v) => (v + 1) % TESTIMONIALS.length);
-    };
+    }, []);
 
     // Auto-advance with pause on hover
     useEffect(() => {
         if (paused) return;
         const id = setInterval(next, AUTOPLAY_MS);
         return () => clearInterval(id);
-    }, [paused, i]);
+    }, [paused, next]);
 
     return (
         <section

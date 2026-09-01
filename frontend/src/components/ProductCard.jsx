@@ -36,6 +36,12 @@ export const ProductCard = ({ product, index = 0 }) => {
         glareOpacity.set(0);
     };
 
+    const glareBackground = useTransform(
+        [glareX, glareY],
+        ([gx, gy]) =>
+            `radial-gradient(circle at ${gx} ${gy}, rgba(255,255,255,0.35) 0%, transparent 65%)`
+    );
+
     return (
         <motion.div
             ref={ref}
@@ -67,11 +73,7 @@ export const ProductCard = ({ product, index = 0 }) => {
                 <motion.div
                     className="absolute inset-0 z-20 pointer-events-none rounded-sm"
                     style={{
-                        background: useTransform(
-                            [glareX, glareY],
-                            ([gx, gy]) =>
-                                `radial-gradient(circle at ${gx} ${gy}, rgba(255,255,255,0.35) 0%, transparent 65%)`
-                        ),
+                        background: glareBackground,
                         opacity: glareOpacity,
                     }}
                 />

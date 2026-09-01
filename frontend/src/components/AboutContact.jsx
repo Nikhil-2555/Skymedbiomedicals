@@ -4,6 +4,22 @@ import { Phone, EnvelopeSimple, MapPin, Clock, Copy, Sparkle } from "@phosphor-i
 import { toast } from "sonner";
 import { CONTACT, BRAND, VALUES, COMMITMENTS } from "@/data/site";
 
+// Individual word component — hooks called at top level (Rules of Hooks safe)
+const ScrubbingWord = ({ word, index, total, scrollYProgress }) => {
+    const start = index / total;
+    const end = (index + 1) / total;
+    const opacity = useTransform(scrollYProgress, [start, end], [0.2, 1]);
+    const y = useTransform(scrollYProgress, [start, end], [6, 0]);
+
+    return (
+        <motion.span
+            style={{ opacity, y, display: "inline-block", marginRight: "0.28em" }}
+        >
+            {word}
+        </motion.span>
+    );
+};
+
 // Word-by-word text scrubbing effect
 const ScrubbingText = ({ text, className }) => {
     const ref = useRef(null);
@@ -16,28 +32,27 @@ const ScrubbingText = ({ text, className }) => {
 
     return (
         <p ref={ref} className={className}>
-            {words.map((word, i) => {
-                const start = i / words.length;
-                const end = (i + 1) / words.length;
-                const opacity = useTransform(scrollYProgress, [start, end], [0.2, 1]);
-                const y = useTransform(scrollYProgress, [start, end], [6, 0]);
-                return (
-                    <motion.span
-                        key={i}
-                        style={{ opacity, y, display: "inline-block", marginRight: "0.28em" }}
-                    >
-                        {word}
-                    </motion.span>
-                );
-            })}
+            {words.map((word, i) => (
+                <ScrubbingWord
+                    key={i}
+                    word={word}
+                    index={i}
+                    total={words.length}
+                    scrollYProgress={scrollYProgress}
+                />
+            ))}
         </p>
     );
 };
 
 export const AboutContact = () => {
-    const copy = (value, label) => {
-        navigator.clipboard?.writeText(value);
-        toast.success(`${label} copied to clipboard`);
+    const copy = async (value, label) => {
+        try {
+            await navigator.clipboard.writeText(value);
+            toast.success(`${label} copied to clipboard`);
+        } catch {
+            toast.error(`Failed to copy ${label.toLowerCase()}`);
+        }
     };
 
     return (

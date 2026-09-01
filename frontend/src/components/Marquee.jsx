@@ -1,13 +1,9 @@
 import { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { MARQUEE_ITEMS } from "@/data/site";
 
 export const EditorialMarquee = () => {
     const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"],
-    });
 
     const [duration, setDuration] = useState(25);
 
@@ -22,13 +18,6 @@ export const EditorialMarquee = () => {
         window.addEventListener("resize", updateSpeed);
         return () => window.removeEventListener("resize", updateSpeed);
     }, []);
-
-    // Speed up marquee based on scroll velocity
-    const rawSpeed = useTransform(scrollYProgress, [0, 0.5, 1], [20, 70, 20]);
-    const speed = useSpring(rawSpeed, { stiffness: 80, damping: 20 });
-
-    // Use a transform to move a duplicate set of items
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
 
     const items = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
 
